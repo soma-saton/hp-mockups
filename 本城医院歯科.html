@@ -1,199 +1,132 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>本城医院歯科｜〒847-0055 の歯科・口腔外科</title>
-<meta name="description" content="本城医院歯科は唐津エリアの歯科・口腔外科です。痛みの少ない丁寧な治療">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<!DOCTYPE html><html lang="ja"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>本城医院歯科｜唐津の歯科 歯医者</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--p:#0A2540;--s:#2779A7;--bg:#EBF5FB;--text:#2d2d2d;--light:#666}
-html{scroll-behavior:smooth}
-body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:var(--bg)}
-/* Header */
-header{position:fixed;top:0;width:100%;z-index:100;background:rgba(var(--p-r,28),var(--p-g,48),var(--p-b,72),.96);background:#0A2540f5;backdrop-filter:blur(8px);padding:12px 24px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:'Noto Serif JP',serif;color:#fff;font-size:1.1rem;letter-spacing:.1em}
-.logo span{color:#f0c040}
-nav{display:flex;gap:20px}
-nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.82rem;transition:color .2s}
-nav a:hover{color:#f0c040}
-@media(max-width:600px){nav{display:none}}
-/* Hero */
-.hero{min-height:100vh;background:linear-gradient(150deg,#0A2540 0%,#2779A7 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px 48px;position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:var(--bg);clip-path:ellipse(60% 100% at 50% 100%)}
-.hero-inner{position:relative;z-index:1;max-width:680px}
-.badge{display:inline-block;border:1px solid rgba(255,255,255,.5);color:rgba(255,255,255,.9);font-size:.75rem;letter-spacing:.2em;padding:4px 16px;border-radius:20px;margin-bottom:20px}
-.hero h1{font-family:'Noto Serif JP',serif;color:#fff;font-size:clamp(1.8rem,5vw,3rem);line-height:1.4;margin-bottom:16px}
-.hero h1 em{color:#f0c040;font-style:normal}
-.hero p{color:rgba(255,255,255,.85);line-height:1.9;margin-bottom:8px;font-size:.95rem}
-.rating{color:#f0c040;font-size:.9rem;margin:12px 0 28px}
-.rating span{color:rgba(255,255,255,.7);font-size:.8rem}
-.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-gold{background:#f0c040;color:#0A2540;font-weight:700;padding:13px 28px;border-radius:4px;text-decoration:none;font-size:.9rem;transition:opacity .2s}
-.btn-gold:hover{opacity:.85}
-.btn-out{border:1px solid rgba(255,255,255,.6);color:#fff;padding:13px 28px;border-radius:4px;text-decoration:none;font-size:.9rem;transition:background .2s}
-.btn-out:hover{background:rgba(255,255,255,.1)}
-/* Sections */
-section{padding:72px 24px}
-.wrap{max-width:960px;margin:0 auto}
-.label{color:#2779A7;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;margin-bottom:10px}
-.ttl{font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem,3vw,2rem);color:#0A2540;margin-bottom:14px}
-.desc{color:var(--light);line-height:1.9;font-size:.92rem;max-width:580px}
-/* Feature cards */
-.features{background:#fff}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:40px}
-.card{background:var(--bg);border-radius:8px;padding:28px 24px;border-top:3px solid #2779A7}
-.card-icon{font-size:1.8rem;margin-bottom:12px}
-.card h3{font-family:'Noto Serif JP',serif;color:#0A2540;margin-bottom:10px;font-size:1rem}
-.card p{color:var(--light);font-size:.85rem;line-height:1.8}
-/* Menu */
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:40px}
-.menu-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07)}
-.menu-top{height:140px;background:linear-gradient(135deg,#0A2540,#2779A7);display:flex;align-items:center;justify-content:center;font-size:3rem}
-.menu-body{padding:18px}
-.menu-body h3{font-family:'Noto Serif JP',serif;color:#0A2540;margin-bottom:6px;font-size:.95rem}
-.menu-body p{color:var(--light);font-size:.8rem;line-height:1.7}
-/* Banner */
-.banner{background:linear-gradient(135deg,#0A2540,#2779A7);color:#fff;padding:56px 24px;text-align:center}
-.banner h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.3rem,3vw,1.8rem);margin-bottom:14px}
-.banner p{opacity:.85;font-size:.9rem;line-height:1.9;max-width:520px;margin:0 auto 28px}
-/* Info */
-.info{background:#fff}
-.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
-@media(max-width:640px){.info-grid{grid-template-columns:1fr}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans JP',sans-serif;background:#fff;color:#2d2d2d}
+header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.97);border-bottom:2px solid #2779a7;padding:0 20px;display:flex;justify-content:space-between;align-items:center;z-index:100;height:58px}
+.logo{font-family:'Noto Serif JP',serif;color:#0a2540;font-size:1rem;display:flex;align-items:center;gap:8px}
+.logo-icon{font-size:1.4rem}
+nav a{color:#0a2540;text-decoration:none;font-size:.78rem;margin-left:18px;opacity:.8}
+nav a:hover{color:#2779a7;opacity:1}
+@media(max-width:580px){nav{display:none}}
+.hero{min-height:80vh;background:linear-gradient(150deg,#f0f7ff 0%,#fff 100%);display:flex;align-items:center;padding:80px 20px 48px}
+.hero-wrap{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:640px){.hero-wrap{grid-template-columns:1fr}}
+.hero-text .tag{display:inline-block;background:#2779a7;color:#fff;font-size:.72rem;padding:4px 12px;border-radius:3px;margin-bottom:16px;letter-spacing:.1em}
+.hero-text h1{font-family:'Noto Serif JP',serif;color:#0a2540;font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.5;margin-bottom:14px}
+.hero-text p{color:#555;line-height:1.95;font-size:.9rem;margin-bottom:20px}
+.rb{color:#2779a7;font-size:.85rem;margin-bottom:20px}.rb span{color:#999;font-size:.78rem}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-b{background:#2779a7;color:#fff;padding:12px 24px;border-radius:4px;text-decoration:none;font-size:.86rem;font-weight:700}
+.btn-o{border:2px solid #2779a7;color:#2779a7;padding:11px 24px;border-radius:4px;text-decoration:none;font-size:.86rem;font-weight:700}
+.hero-visual{background:linear-gradient(135deg,#0a2540,#2779a7);border-radius:12px;height:300px;display:flex;align-items:center;justify-content:center;font-size:6rem}
+section{padding:64px 20px}.wrap{max-width:940px;margin:0 auto}
+.label{color:#2779a7;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:8px}
+.ttl{font-family:'Noto Serif JP',serif;font-size:clamp(1.3rem,3vw,1.8rem);color:#0a2540;margin-bottom:12px}
+/* 院長メッセージ */
+.message{background:#f0f7ff}
+.msg-inner{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;margin-top:32px;background:#fff;padding:28px;border-radius:8px;border-left:4px solid #2779a7}
+@media(max-width:600px){.msg-inner{grid-template-columns:1fr}}
+.msg-icon{font-size:4rem;text-align:center}
+.msg-text h3{font-family:'Noto Serif JP',serif;color:#0a2540;font-size:1.05rem;margin-bottom:10px}
+.msg-text p{color:#555;font-size:.87rem;line-height:2}
+/* 診療科目 */
+.dept-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:32px}
+.dept-card{border:1px solid #e0ecf5;border-radius:8px;padding:20px;background:#fff;transition:box-shadow .2s}
+.dept-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.dept-card .di{font-size:1.6rem;margin-bottom:10px}
+.dept-card h3{font-family:'Noto Serif JP',serif;color:#0a2540;font-size:.95rem;margin-bottom:6px}
+.dept-card p{color:#777;font-size:.82rem;line-height:1.7}
+/* 診療時間 */
+.hours{background:#fff}
+.hours-band{background:#0a2540;color:#fff;border-radius:8px;padding:28px;margin-top:32px}
+.hours-band h3{font-family:'Noto Serif JP',serif;font-size:1.05rem;margin-bottom:16px;color:#ffe;letter-spacing:.05em}
+.hours-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.day-block h4{font-size:.78rem;opacity:.7;margin-bottom:6px}
+.day-block p{font-size:1rem;font-weight:700;color:#ffe066}
+.notice{background:#ffe8e8;border-left:3px solid #e74c3c;padding:10px 14px;border-radius:0 4px 4px 0;font-size:.82rem;color:#c0392b;margin-top:16px}
+/* アクセス */
+.ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:32px}
+@media(max-width:600px){.ac-grid{grid-template-columns:1fr}}
 table.tbl{width:100%;border-collapse:collapse}
-table.tbl tr{border-bottom:1px solid rgba(0,0,0,.07)}
-table.tbl th{text-align:left;padding:12px 0;color:var(--light);font-size:.8rem;font-weight:400;width:110px}
-table.tbl td{padding:12px 0;font-size:.88rem;line-height:1.7}
-.map-box{background:linear-gradient(135deg,#d0e8f0,#b8d8ec);border-radius:8px;height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0A2540;gap:8px}
-.map-box .icon{font-size:2.2rem}
-.map-box p{font-size:.85rem}
-/* Contact */
-.contact{text-align:center}
-.c-box{background:#0A2540;color:#fff;border-radius:12px;padding:44px 28px;max-width:500px;margin:40px auto 0}
-.c-box h3{font-family:'Noto Serif JP',serif;font-size:1.2rem;margin-bottom:8px}
-.c-box .sub{opacity:.75;font-size:.85rem;margin-bottom:24px}
-.c-phone{font-size:1.9rem;font-weight:700;color:#f0c040;letter-spacing:.05em;margin-bottom:6px}
-.c-hours{font-size:.8rem;opacity:.65;margin-bottom:22px}
-footer{background:#0d1f33;color:rgba(255,255,255,.45);padding:28px 24px;text-align:center;font-size:.78rem}
-footer strong{color:rgba(255,255,255,.75)}
-</style>
-</head>
-<body>
+table.tbl tr{border-bottom:1px solid #eee}
+table.tbl th{text-align:left;padding:11px 0;color:#999;font-size:.78rem;font-weight:400;width:100px}
+table.tbl td{padding:11px 0;font-size:.86rem;line-height:1.7}
+.map-box{background:linear-gradient(135deg,#f0f7ff,#2779a733);border-radius:8px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0a2540;gap:6px}
+.map-box .mi{font-size:2rem}.map-box p{font-size:.82rem}
+.tel-band{background:#2779a7;color:#fff;padding:40px 20px;text-align:center}
+.tel-band h2{font-family:'Noto Serif JP',serif;font-size:1.4rem;margin-bottom:10px}
+.tel-band p{opacity:.85;font-size:.87rem;margin-bottom:18px}
+.tel-num{font-size:2.2rem;font-weight:700;letter-spacing:.05em;margin-bottom:4px}
+.tel-note{font-size:.78rem;opacity:.7;margin-bottom:18px}
+footer{background:#0a2540;color:rgba(255,255,255,.4);padding:24px;text-align:center;font-size:.76rem}
+footer strong{color:rgba(255,255,255,.7)}
+</style></head><body>
 <header>
-  <div class="logo">本城医院歯科<span></span></div>
-  <nav>
-    <a href="#features">特徴</a>
-    <a href="#menu">サービス</a>
-    <a href="#info">店舗情報</a>
-    <a href="#contact">お問合せ</a>
-  </nav>
+<div class="logo"><span class="logo-icon">🦷</span>本城医院歯科</div>
+<nav><a href="#message">院長ご挨拶</a><a href="#dept">診療案内</a><a href="#hours">診療時間</a><a href="#access">アクセス</a></nav>
 </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="badge">唐津 / 歯科・口腔外科</div>
-    <h1><em>本城医院歯科</em><br>へようこそ</h1>
-    <p>痛みの少ない丁寧な治療</p>
-    <div class="rating">⭐ 4.4 <span>(5件のクチコミ)</span></div>
-    <div class="btns">
-      <a href="#menu" class="btn-gold">サービスを見る</a>
-      <a href="#contact" class="btn-out">お問合せ・予約</a>
-    </div>
-  </div>
-</section>
-
-<section class="features" id="features">
-  <div class="wrap">
-    <p class="label">Our Features</p>
-    <h2 class="ttl">選ばれる3つの理由</h2>
-    <p class="desc">地域のお客様に長く信頼していただくために、私たちが大切にしていること。</p>
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">🏆</div>
-        <h3>虫歯・歯周病治療</h3>
-        <p>お客様のご要望を丁寧にヒアリングし、最高の虫歯・歯周病治療をご提供します。</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">💯</div>
-        <h3>予防歯科・クリーニング</h3>
-        <p>経験豊富なスタッフが、予防歯科・クリーニングにこだわって対応いたします。</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🤝</div>
-        <h3>小児歯科・矯正</h3>
-        <p>アットホームな雰囲気で、お気軽にご相談いただけます。小児歯科・矯正が自慢です。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="menu">
-  <div class="wrap">
-    <p class="label">Services / Menu</p>
-    <h2 class="ttl">サービス・メニュー</h2>
-    <p class="desc">お客様のニーズに合わせた幅広いメニューをご用意しています。</p>
-    <div class="menu-grid">
-      <div class="menu-card"><div class="menu-top">✨</div><div class="menu-body"><h3>一般歯科</h3><p>詳しくはお問合せください。</p></div></div>
-      <div class="menu-card"><div class="menu-top">⭐</div><div class="menu-body"><h3>予防処置</h3><p>詳しくはお問合せください。</p></div></div>
-      <div class="menu-card"><div class="menu-top">🎯</div><div class="menu-body"><h3>小児歯科</h3><p>詳しくはお問合せください。</p></div></div>
-      <div class="menu-card"><div class="menu-top">💎</div><div class="menu-body"><h3>矯正歯科</h3><p>詳しくはお問合せください。</p></div></div>
-    </div>
-  </div>
-</section>
-
-<div class="banner">
-  <h2>唐津で、本城医院歯科をよろしくお願いします。</h2>
-  <p>地域のお客様に愛されて、スタッフ一同誠心誠意対応いたします。<br>お気軽にご来店・お問合せください。</p>
-  <a href="#contact" class="btn-gold">お問合せはこちら</a>
+<div style="padding:58px 0 0">
+<div class="hero"><div class="hero-wrap">
+<div class="hero-text">
+<div class="tag">唐津 / 歯科 歯医者</div>
+<h1>地域の皆様の<br>健康を、支える。<br>本城医院歯科</h1>
+<p>丁寧な診察と最新の治療機器で、患者様のお口の健康をサポートします。お気軽にご相談ください。</p>
+<div class="rb">⭐ 4.4 <span>(5件のクチコミ)</span></div>
+<div class="btns"><a href="#dept" class="btn-b">診療案内を見る</a><a href="#hours" class="btn-o">診療時間を確認</a></div>
 </div>
+<div class="hero-visual">🦷</div>
+</div></div></div>
 
-<section class="info" id="info">
-  <div class="wrap">
-    <p class="label">Store Info</p>
-    <h2 class="ttl">店舗情報・アクセス</h2>
-    <div class="info-grid">
-      <div>
-        <table class="tbl">
-          <tr><th>店舗名</th><td>本城医院歯科</td></tr>
-          <tr><th>所在地</th><td>〒847-0055 佐賀県唐津市刀町１５３７−４</td></tr>
-          <tr><th>電話番号</th><td>0955-72-5460</td></tr>
-          <tr><th>営業時間</th><td>（要確認）</td></tr>
-          <tr><th>定休日</th><td>（要確認）</td></tr>
-          <tr><th>駐車場</th><td>（要確認）</td></tr>
-        </table>
-      </div>
-      <div>
-        <div class="map-box">
-          <div class="icon">📍</div>
-          <p>〒847-0055 佐賀県唐津市刀町１５</p>
-          <p style="font-size:.72rem;opacity:.7;margin-top:4px">Googleマップで開く</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="message" id="message"><div class="wrap">
+<p class="label">Doctor's Message</p><h2 class="ttl">院長ご挨拶</h2>
+<div class="msg-inner">
+<div class="msg-icon">👨‍⚕️</div>
+<div class="msg-text">
+<h3>患者様に寄り添った医療を</h3>
+<p>当院は唐津の地域医療に貢献することを使命としています。痛みが少なく、安心して治療を受けていただけるよう、日々研鑽を続けております。何でもお気軽にご相談ください。</p>
+<p style="margin-top:10px;font-size:.82rem;color:#999">本城医院歯科 院長</p>
+</div></div></div></section>
 
-<section class="contact" id="contact">
-  <div class="wrap">
-    <p class="label">Contact</p>
-    <h2 class="ttl">お問合せ・ご予約</h2>
-    <p class="desc" style="margin:0 auto">ご不明な点・ご予約はお電話またはお問合せフォームにてどうぞ。</p>
-    <div class="c-box">
-      <h3>お電話でのお問合せ</h3>
-      <p class="sub">スタッフが丁寧にご対応いたします</p>
-      <div class="c-phone">0955-72-5460</div>
-      <div class="c-hours">受付時間：営業時間内</div>
-      <a href="tel:0955-72-5460" class="btn-gold">電話する</a>
-    </div>
-  </div>
-</section>
+<section id="dept"><div class="wrap">
+<p class="label">歯科診療のご案内</p><h2 class="ttl">診療案内</h2>
+<div class="dept-grid">
+<div class="dept-card"><div class="di">🦷</div><h3>一般歯科</h3><p>虫歯・歯周病の治療</p></div><div class="dept-card"><div class="di">🦷</div><h3>予防歯科</h3><p>クリーニング・定期検診</p></div><div class="dept-card"><div class="di">🦷</div><h3>小児歯科</h3><p>お子様の歯のケア</p></div><div class="dept-card"><div class="di">🦷</div><h3>審美・矯正</h3><p>ホワイトニング・矯正相談</p></div>
+</div></div></section>
 
-<footer>
-  <strong>本城医院歯科</strong><br>〒847-0055 佐賀県唐津市刀町１５３７−４<br><br>
-  &copy; 2026 本城医院歯科. All Rights Reserved.
-</footer>
-</body>
-</html>
+<section class="hours" id="hours"><div class="wrap">
+<p class="label">Hours</p><h2 class="ttl">診療時間</h2>
+<div class="hours-band">
+<h3>診療時間のご案内</h3>
+<div class="hours-grid">
+<div class="day-block"><h4>平日</h4><p>（要確認）</p></div>
+<div class="day-block"><h4>土曜日</h4><p>（要確認）</p></div>
+<div class="day-block"><h4>日曜・祝日</h4><p>休診</p></div>
+</div>
+<p class="notice">※ 診療時間・休診日は変更になる場合があります。必ず事前にお電話でご確認ください。</p>
+</div></div></section>
+
+<section id="access"><div class="wrap">
+<p class="label">Access</p><h2 class="ttl">アクセス・所在地</h2>
+<div class="ac-grid"><div>
+<table class="tbl">
+<tr><th>院名</th><td>本城医院歯科</td></tr>
+<tr><th>住所</th><td>〒847-0055 佐賀県唐津市刀町１５３７−４</td></tr>
+<tr><th>電話</th><td>0955-72-5460</td></tr>
+<tr><th>駐車場</th><td>（要確認）</td></tr>
+</table></div>
+<div><div class="map-box"><div class="mi">📍</div><p>〒847-0055 佐賀県唐津市刀町１５</p></div></div>
+</div></div></section>
+
+<div class="tel-band">
+<h2>ご予約・お問合せ</h2>
+<p>初診の方もお気軽にお電話ください。</p>
+<div class="tel-num">0955-72-5460</div>
+<div class="tel-note">受付時間：診療時間内</div>
+<a href="tel:0955-72-5460" class="btn-b">電話予約する</a>
+</div>
+<footer><strong>本城医院歯科</strong><br>〒847-0055 佐賀県唐津市刀町１５３７−４<br><br>&copy; 2026 本城医院歯科.</footer>
+</body></html>
