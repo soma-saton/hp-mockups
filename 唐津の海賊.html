@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>唐津の海賊｜〒847-0061 の海鮮・魚料理</title>
+<meta name="description" content="唐津の海賊は唐津エリアの海鮮・魚料理です。獲れたて直送の海鮮">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#0A2540;--s:#1B6CA8;--bg:#EBF5FB;--text:#2d2d2d;--light:#666}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:var(--bg)}
+/* Header */
+header{position:fixed;top:0;width:100%;z-index:100;background:rgba(var(--p-r,28),var(--p-g,48),var(--p-b,72),.96);background:#0A2540f5;backdrop-filter:blur(8px);padding:12px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Noto Serif JP',serif;color:#fff;font-size:1.1rem;letter-spacing:.1em}
+.logo span{color:#f0c040}
+nav{display:flex;gap:20px}
+nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.82rem;transition:color .2s}
+nav a:hover{color:#f0c040}
+@media(max-width:600px){nav{display:none}}
+/* Hero */
+.hero{min-height:100vh;background:linear-gradient(150deg,#0A2540 0%,#1B6CA8 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px 48px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:var(--bg);clip-path:ellipse(60% 100% at 50% 100%)}
+.hero-inner{position:relative;z-index:1;max-width:680px}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.5);color:rgba(255,255,255,.9);font-size:.75rem;letter-spacing:.2em;padding:4px 16px;border-radius:20px;margin-bottom:20px}
+.hero h1{font-family:'Noto Serif JP',serif;color:#fff;font-size:clamp(1.8rem,5vw,3rem);line-height:1.4;margin-bottom:16px}
+.hero h1 em{color:#f0c040;font-style:normal}
+.hero p{color:rgba(255,255,255,.85);line-height:1.9;margin-bottom:8px;font-size:.95rem}
+.rating{color:#f0c040;font-size:.9rem;margin:12px 0 28px}
+.rating span{color:rgba(255,255,255,.7);font-size:.8rem}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-gold{background:#f0c040;color:#0A2540;font-weight:700;padding:13px 28px;border-radius:4px;text-decoration:none;font-size:.9rem;transition:opacity .2s}
+.btn-gold:hover{opacity:.85}
+.btn-out{border:1px solid rgba(255,255,255,.6);color:#fff;padding:13px 28px;border-radius:4px;text-decoration:none;font-size:.9rem;transition:background .2s}
+.btn-out:hover{background:rgba(255,255,255,.1)}
+/* Sections */
+section{padding:72px 24px}
+.wrap{max-width:960px;margin:0 auto}
+.label{color:#1B6CA8;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;margin-bottom:10px}
+.ttl{font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem,3vw,2rem);color:#0A2540;margin-bottom:14px}
+.desc{color:var(--light);line-height:1.9;font-size:.92rem;max-width:580px}
+/* Feature cards */
+.features{background:#fff}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:40px}
+.card{background:var(--bg);border-radius:8px;padding:28px 24px;border-top:3px solid #1B6CA8}
+.card-icon{font-size:1.8rem;margin-bottom:12px}
+.card h3{font-family:'Noto Serif JP',serif;color:#0A2540;margin-bottom:10px;font-size:1rem}
+.card p{color:var(--light);font-size:.85rem;line-height:1.8}
+/* Menu */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:40px}
+.menu-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.menu-top{height:140px;background:linear-gradient(135deg,#0A2540,#1B6CA8);display:flex;align-items:center;justify-content:center;font-size:3rem}
+.menu-body{padding:18px}
+.menu-body h3{font-family:'Noto Serif JP',serif;color:#0A2540;margin-bottom:6px;font-size:.95rem}
+.menu-body p{color:var(--light);font-size:.8rem;line-height:1.7}
+/* Banner */
+.banner{background:linear-gradient(135deg,#0A2540,#1B6CA8);color:#fff;padding:56px 24px;text-align:center}
+.banner h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.3rem,3vw,1.8rem);margin-bottom:14px}
+.banner p{opacity:.85;font-size:.9rem;line-height:1.9;max-width:520px;margin:0 auto 28px}
+/* Info */
+.info{background:#fff}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+@media(max-width:640px){.info-grid{grid-template-columns:1fr}}
+table.tbl{width:100%;border-collapse:collapse}
+table.tbl tr{border-bottom:1px solid rgba(0,0,0,.07)}
+table.tbl th{text-align:left;padding:12px 0;color:var(--light);font-size:.8rem;font-weight:400;width:110px}
+table.tbl td{padding:12px 0;font-size:.88rem;line-height:1.7}
+.map-box{background:linear-gradient(135deg,#d0e8f0,#b8d8ec);border-radius:8px;height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0A2540;gap:8px}
+.map-box .icon{font-size:2.2rem}
+.map-box p{font-size:.85rem}
+/* Contact */
+.contact{text-align:center}
+.c-box{background:#0A2540;color:#fff;border-radius:12px;padding:44px 28px;max-width:500px;margin:40px auto 0}
+.c-box h3{font-family:'Noto Serif JP',serif;font-size:1.2rem;margin-bottom:8px}
+.c-box .sub{opacity:.75;font-size:.85rem;margin-bottom:24px}
+.c-phone{font-size:1.9rem;font-weight:700;color:#f0c040;letter-spacing:.05em;margin-bottom:6px}
+.c-hours{font-size:.8rem;opacity:.65;margin-bottom:22px}
+footer{background:#0d1f33;color:rgba(255,255,255,.45);padding:28px 24px;text-align:center;font-size:.78rem}
+footer strong{color:rgba(255,255,255,.75)}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">唐津の海賊<span></span></div>
+  <nav>
+    <a href="#features">特徴</a>
+    <a href="#menu">サービス</a>
+    <a href="#info">店舗情報</a>
+    <a href="#contact">お問合せ</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge">唐津 / 海鮮・魚料理</div>
+    <h1><em>唐津の海賊</em><br>へようこそ</h1>
+    <p>獲れたて直送の海鮮</p>
+    <div class="rating">⭐ 4.6 <span>(5件のクチコミ)</span></div>
+    <div class="btns">
+      <a href="#menu" class="btn-gold">サービスを見る</a>
+      <a href="#contact" class="btn-out">お問合せ・予約</a>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="wrap">
+    <p class="label">Our Features</p>
+    <h2 class="ttl">選ばれる3つの理由</h2>
+    <p class="desc">地域のお客様に長く信頼していただくために、私たちが大切にしていること。</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🏆</div>
+        <h3>海鮮丼</h3>
+        <p>お客様のご要望を丁寧にヒアリングし、最高の海鮮丼をご提供します。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💯</div>
+        <h3>お刺身盛り合わせ</h3>
+        <p>経験豊富なスタッフが、お刺身盛り合わせにこだわって対応いたします。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤝</div>
+        <h3>焼き魚定食</h3>
+        <p>アットホームな雰囲気で、お気軽にご相談いただけます。焼き魚定食が自慢です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <p class="label">Services / Menu</p>
+    <h2 class="ttl">サービス・メニュー</h2>
+    <p class="desc">お客様のニーズに合わせた幅広いメニューをご用意しています。</p>
+    <div class="menu-grid">
+      <div class="menu-card"><div class="menu-top">✨</div><div class="menu-body"><h3>海鮮丼</h3><p>詳しくはお問合せください。</p></div></div>
+      <div class="menu-card"><div class="menu-top">⭐</div><div class="menu-body"><h3>刺身盛り</h3><p>詳しくはお問合せください。</p></div></div>
+      <div class="menu-card"><div class="menu-top">🎯</div><div class="menu-body"><h3>焼き魚</h3><p>詳しくはお問合せください。</p></div></div>
+      <div class="menu-card"><div class="menu-top">💎</div><div class="menu-body"><h3>天ぷら</h3><p>詳しくはお問合せください。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="banner">
+  <h2>唐津で、唐津の海賊をよろしくお願いします。</h2>
+  <p>地域のお客様に愛されて、スタッフ一同誠心誠意対応いたします。<br>お気軽にご来店・お問合せください。</p>
+  <a href="#contact" class="btn-gold">お問合せはこちら</a>
+</div>
+
+<section class="info" id="info">
+  <div class="wrap">
+    <p class="label">Store Info</p>
+    <h2 class="ttl">店舗情報・アクセス</h2>
+    <div class="info-grid">
+      <div>
+        <table class="tbl">
+          <tr><th>店舗名</th><td>唐津の海賊</td></tr>
+          <tr><th>所在地</th><td>〒847-0061 佐賀県唐津市材木町２０６９</td></tr>
+          <tr><th>電話番号</th><td>（要確認）</td></tr>
+          <tr><th>営業時間</th><td>（要確認）</td></tr>
+          <tr><th>定休日</th><td>（要確認）</td></tr>
+          <tr><th>駐車場</th><td>（要確認）</td></tr>
+        </table>
+      </div>
+      <div>
+        <div class="map-box">
+          <div class="icon">📍</div>
+          <p>〒847-0061 佐賀県唐津市材木町２</p>
+          <p style="font-size:.72rem;opacity:.7;margin-top:4px">Googleマップで開く</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="label">Contact</p>
+    <h2 class="ttl">お問合せ・ご予約</h2>
+    <p class="desc" style="margin:0 auto">ご不明な点・ご予約はお電話またはお問合せフォームにてどうぞ。</p>
+    <div class="c-box">
+      <h3>お電話でのお問合せ</h3>
+      <p class="sub">スタッフが丁寧にご対応いたします</p>
+      <div class="c-phone">（要確認）</div>
+      <div class="c-hours">受付時間：営業時間内</div>
+      <a href="tel:（要確認）" class="btn-gold">電話する</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>唐津の海賊</strong><br>〒847-0061 佐賀県唐津市材木町２０６９<br><br>
+  &copy; 2026 唐津の海賊. All Rights Reserved.
+</footer>
+</body>
+</html>
