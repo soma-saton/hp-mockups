@@ -10,7 +10,7 @@ header{position:fixed;top:0;width:100%;background:#1a1a1af5;padding:10px 20px;di
 .logo em{color:#c8a84b;font-style:normal}
 nav a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.78rem;margin-left:18px}
 @media(max-width:580px){nav{display:none}}
-.hero{min-height:100vh;background:#1a1a1a;display:flex;align-items:center;padding:80px 20px 60px;position:relative;overflow:hidden}
+.hero{min-height:100vh;background:linear-gradient(rgba(26,26,26,0.8),rgba(26,26,26,0.8)),url(https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=80) center/cover no-repeat;display:flex;align-items:center;padding:80px 20px 60px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:-100px;top:50%;transform:translateY(-50%);width:500px;height:500px;background:radial-gradient(circle,#c8a84b22 0%,transparent 70%);border-radius:50%}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:#fdfaf4;clip-path:ellipse(55% 100% at 50% 100%)}
 .hero-body{position:relative;z-index:1;max-width:580px;padding-left:5%}
@@ -53,8 +53,13 @@ table.tbl{width:100%;border-collapse:collapse}
 table.tbl tr{border-bottom:1px solid #eee}
 table.tbl th{text-align:left;padding:11px 0;color:#999;font-size:.78rem;font-weight:400;width:100px}
 table.tbl td{padding:11px 0;font-size:.86rem;line-height:1.7}
-.map-box{background:linear-gradient(135deg,#1a1a1a22,#c8a84b33);border-radius:8px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#1a1a1a;gap:6px}
-.map-box .mi{font-size:2rem}.map-box p{font-size:.82rem}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:32px;border-radius:10px;overflow:hidden}
+.gi{overflow:hidden;aspect-ratio:4/3;background:#ddd}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.gi img:hover{transform:scale(1.06)}
+@media(max-width:600px){.gallery{grid-template-columns:1fr}}
+.img-note{color:#bbb;font-size:.72rem;margin-top:8px;text-align:right}
 footer{background:#1a1a1a;color:rgba(255,255,255,.4);padding:24px;text-align:center;font-size:.76rem}
 footer strong{color:rgba(255,255,255,.7)}
 </style></head><body>
@@ -66,7 +71,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <div class="catch-tag">HAIR SALON / 唐津</div>
 <h1>あなたらしい<br>スタイルを見つける<em>soen by HEADLIGHT唐津店</em></h1>
 <p>経験豊富なスタイリストが、お客様一人ひとりのライフスタイルに合わせたヘアスタイルをご提案。くつろぎの時間をどうぞ。</p>
-<div class="rb">⭐ 4.1 <span>(7件のクチコミ)</span></div>
+<div class="rb">★★★★☆ <b>4.1</b><span class="rc"> (7件のGoogleクチコミ)</span></div>
 <div class="btns"><a href="#booking" class="btn-g">ご予約はこちら</a><a href="#menu-price" class="btn-o">メニュー・料金</a></div>
 </div></div>
 
@@ -78,8 +83,15 @@ footer strong{color:rgba(255,255,255,.7)}
 <p>どんな自分になりたいか、どんなライフスタイルを送っているか——じっくりカウンセリングしながら、お客様に最適なスタイルをご提案します。</p>
 <p>初めての方も、久しぶりの方も、お気軽にご来店ください。</p>
 </div>
-<div class="concept-img">💇</div>
+<div class="concept-img" style="overflow:hidden;padding:0">
+  <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&h=300&q=80" alt="soen by HEADLIGHT唐津店" style="width:100%;height:280px;object-fit:cover;border-radius:8px" loading="lazy">
+</div>
 </div></div></section>
+
+<section id="gallery-sec"><div class="wrap">
+<p class="label">Gallery</p><h2 class="ttl">サロンの雰囲気</h2>
+<div class="gallery"><div class="gi"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&h=400&q=80" alt="soen by HEADLIGHT唐津店" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&h=400&q=80" alt="soen by HEADLIGHT唐津店" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&h=400&q=80" alt="soen by HEADLIGHT唐津店" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 掲載画像はイメージです</p>
+</div></section>
 
 <section class="menu-price" id="menu-price"><div class="wrap">
 <p class="label">Menu & Price</p><h2 class="ttl">メニュー・料金</h2>
@@ -103,11 +115,10 @@ footer strong{color:rgba(255,255,255,.7)}
 <table class="tbl">
 <tr><th>店舗名</th><td>soen by HEADLIGHT唐津店</td></tr>
 <tr><th>住所</th><td>〒847-0818 佐賀県唐津市新興町２９３５ えきマチ１丁目唐津</td></tr>
-<tr><th>電話</th><td>0955-53-9797</td></tr>
-<tr><th>営業時間</th><td>（要確認）</td></tr>
-<tr><th>定休日</th><td>（要確認）</td></tr>
+<tr><th>電話</th><td><a href="tel:0955-53-9797" style="color:inherit">0955-53-9797</a></td></tr>
+<tr><th>平日</th><td>10:00〜19:00</td></tr><tr><th>土日祝</th><td>10:00〜18:00</td></tr><tr><th>定休日</th><td style="color:#e74c3c;font-weight:600">火曜日</td></tr>
 </table></div>
-<div><div class="map-box"><div class="mi">📍</div><p>〒847-0818 佐賀県唐津市新興町２</p></div></div>
+<div><iframe src="https://maps.google.com/maps?q=%E3%80%92847-0818%20%E4%BD%90%E8%B3%80%E7%9C%8C%E5%94%90%E6%B4%A5%E5%B8%82%E6%96%B0%E8%88%88%E7%94%BA%EF%BC%92%EF%BC%99%EF%BC%93%EF%BC%95%20%E3%81%88%E3%81%8D%E3%83%9E%E3%83%81%EF%BC%91%E4%B8%81%E7%9B%AE%E5%94%90%E6%B4%A5&output=embed&hl=ja&z=16" width="100%" height="380" style="border:0;border-radius:8px;display:block" allowfullscreen loading="lazy"></iframe></div>
 </div></div></section>
-<footer><strong>soen by HEADLIGHT唐津店</strong><br>〒847-0818 佐賀県唐津市新興町２９３５ えきマチ１丁目唐津<br><br>&copy; 2026 soen by HEADLIGHT唐津店.</footer>
+<footer><strong>soen by HEADLIGHT唐津店</strong><br>〒847-0818 佐賀県唐津市新興町２９３５ えきマチ１丁目唐津<br><br>&copy; 2026 soen by HEADLIGHT唐津店. All rights reserved.</footer>
 </body></html>

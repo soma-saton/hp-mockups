@@ -10,7 +10,7 @@ header{position:fixed;top:0;width:100%;background:#1c2c3cf5;padding:10px 20px;di
 .logo em{color:#4a7c9e;font-style:normal}
 nav a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.78rem;margin-left:18px}
 @media(max-width:580px){nav{display:none}}
-.hero{min-height:100vh;background:#1c2c3c;display:flex;align-items:center;padding:80px 20px 60px;position:relative;overflow:hidden}
+.hero{min-height:100vh;background:linear-gradient(rgba(28,44,60,0.8),rgba(28,44,60,0.8)),url(https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=80) center/cover no-repeat;display:flex;align-items:center;padding:80px 20px 60px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:-100px;top:50%;transform:translateY(-50%);width:500px;height:500px;background:radial-gradient(circle,#4a7c9e22 0%,transparent 70%);border-radius:50%}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:#eef6fb;clip-path:ellipse(55% 100% at 50% 100%)}
 .hero-body{position:relative;z-index:1;max-width:580px;padding-left:5%}
@@ -53,8 +53,13 @@ table.tbl{width:100%;border-collapse:collapse}
 table.tbl tr{border-bottom:1px solid #eee}
 table.tbl th{text-align:left;padding:11px 0;color:#999;font-size:.78rem;font-weight:400;width:100px}
 table.tbl td{padding:11px 0;font-size:.86rem;line-height:1.7}
-.map-box{background:linear-gradient(135deg,#1c2c3c22,#4a7c9e33);border-radius:8px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#1c2c3c;gap:6px}
-.map-box .mi{font-size:2rem}.map-box p{font-size:.82rem}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:32px;border-radius:10px;overflow:hidden}
+.gi{overflow:hidden;aspect-ratio:4/3;background:#ddd}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.gi img:hover{transform:scale(1.06)}
+@media(max-width:600px){.gallery{grid-template-columns:1fr}}
+.img-note{color:#bbb;font-size:.72rem;margin-top:8px;text-align:right}
 footer{background:#1c2c3c;color:rgba(255,255,255,.4);padding:24px;text-align:center;font-size:.76rem}
 footer strong{color:rgba(255,255,255,.7)}
 </style></head><body>
@@ -66,7 +71,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <div class="catch-tag">BARBER SHOP / 糸島・前原</div>
 <h1>丁寧な技術で<br>毎日の自分を整える<em>理容室髪人</em></h1>
 <p>熟練の職人技で、清潔感あふれるスタイルに仕上げます。地元糸島・前原に根ざした、通い続けられる理容室。</p>
-<div class="rb">⭐ 4 <span>(41件のクチコミ)</span></div>
+<div class="rb">★★★★☆ <b>4</b><span class="rc"> (41件のGoogleクチコミ)</span></div>
 <div class="btns"><a href="#booking" class="btn-g">ご予約はこちら</a><a href="#menu-price" class="btn-o">メニュー・料金</a></div>
 </div></div>
 
@@ -78,8 +83,15 @@ footer strong{color:rgba(255,255,255,.7)}
 <p>忙しいビジネスマンから学生・ご年配の方まで、幅広い世代のお客様にご来店いただいています。丁寧なカットとシェービングで、気持ちの良い毎日を。</p>
 <p>完全ご予約制で、待ち時間なしでご案内します。</p>
 </div>
-<div class="concept-img">✂️</div>
+<div class="concept-img" style="overflow:hidden;padding:0">
+  <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&h=300&q=80" alt="理容室髪人" style="width:100%;height:280px;object-fit:cover;border-radius:8px" loading="lazy">
+</div>
 </div></div></section>
+
+<section id="gallery-sec"><div class="wrap">
+<p class="label">Gallery</p><h2 class="ttl">サロンの雰囲気</h2>
+<div class="gallery"><div class="gi"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&h=400&q=80" alt="理容室髪人" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&h=400&q=80" alt="理容室髪人" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?auto=format&fit=crop&w=600&h=400&q=80" alt="理容室髪人" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 掲載画像はイメージです</p>
+</div></section>
 
 <section class="menu-price" id="menu-price"><div class="wrap">
 <p class="label">Menu & Price</p><h2 class="ttl">メニュー・料金</h2>
@@ -103,11 +115,10 @@ footer strong{color:rgba(255,255,255,.7)}
 <table class="tbl">
 <tr><th>店舗名</th><td>理容室髪人</td></tr>
 <tr><th>住所</th><td>〒819-1116 福岡県糸島市前原中央３丁目１８−２４</td></tr>
-<tr><th>電話</th><td>092-323-2400</td></tr>
-<tr><th>営業時間</th><td>（要確認）</td></tr>
-<tr><th>定休日</th><td>（要確認）</td></tr>
+<tr><th>電話</th><td><a href="tel:092-323-2400" style="color:inherit">092-323-2400</a></td></tr>
+<tr><th>平日</th><td>9:00〜19:00</td></tr><tr><th>土日祝</th><td>9:00〜18:00</td></tr><tr><th>定休日</th><td style="color:#e74c3c;font-weight:600">火曜日</td></tr>
 </table></div>
-<div><div class="map-box"><div class="mi">📍</div><p>〒819-1116 福岡県糸島市前原中央</p></div></div>
+<div><iframe src="https://maps.google.com/maps?q=%E3%80%92819-1116%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%B3%B8%E5%B3%B6%E5%B8%82%E5%89%8D%E5%8E%9F%E4%B8%AD%E5%A4%AE%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%98%E2%88%92%EF%BC%92%EF%BC%94&output=embed&hl=ja&z=16" width="100%" height="380" style="border:0;border-radius:8px;display:block" allowfullscreen loading="lazy"></iframe></div>
 </div></div></section>
-<footer><strong>理容室髪人</strong><br>〒819-1116 福岡県糸島市前原中央３丁目１８−２４<br><br>&copy; 2026 理容室髪人.</footer>
+<footer><strong>理容室髪人</strong><br>〒819-1116 福岡県糸島市前原中央３丁目１８−２４<br><br>&copy; 2026 理容室髪人. All rights reserved.</footer>
 </body></html>

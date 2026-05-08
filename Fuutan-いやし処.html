@@ -9,7 +9,7 @@ header{position:fixed;top:0;width:100%;background:#2c3e2df5;backdrop-filter:blur
 .logo{font-family:'Noto Serif JP',serif;color:#fff;font-size:1rem}
 nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.78rem;margin-left:16px}
 @media(max-width:580px){nav{display:none}}
-.hero{min-height:90vh;background:linear-gradient(150deg,#2c3e2d,#5d8a5e);display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
+.hero{min-height:90vh;background:linear-gradient(rgba(44,62,45,0.74),rgba(44,62,45,0.74)),url(https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80) center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:56px;background:#f0f7ee;clip-path:ellipse(60% 100% at 50% 100%)}
 .hero-inner{position:relative;z-index:1;max-width:620px}
 .hi{font-size:5rem;display:block;margin-bottom:18px}
@@ -58,7 +58,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <span class="hi">🌿</span>
 <h1>日々の疲れを、しっかりリセット<br><em>Fuutan ～いやし処～</em></h1>
 <p>唐津で、地域の皆様に長く愛されてきたマッサージです。<br>丁寧なサービスで、お客様一人ひとりに向き合います。</p>
-<div class="rb">⭐ 5 <span>(2件のクチコミ)</span></div>
+<div class="rb">★★★★★ <b>5</b><span class="rc"> (2件のGoogleクチコミ)</span></div>
 <div class="btns"><a href="#feat" class="btn-y">サービス詳細</a><a href="#cta" class="btn-o">お問合せ</a></div>
 </div></div>
 
@@ -69,6 +69,11 @@ footer strong{color:rgba(255,255,255,.7)}
 <div class="fc"><div class="fc-icon">✨</div><h3>丁寧・確実な仕事</h3><p>一つひとつの仕事を丁寧に。お客様にご満足いただけるまで誠実に対応します。</p></div>
 <div class="fc"><div class="fc-icon">💬</div><h3>気軽に相談できる</h3><p>小さなことでもお気軽にご相談ください。まずはお話を聞かせていただきます。</p></div>
 </div></div></section>
+
+<section id="gallery-sec"><div class="wrap">
+<p class="label">Gallery</p><h2 class="ttl">サービスの様子</h2>
+<div class="gallery"><div class="gi"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&h=400&q=80" alt="Fuutan ～いやし処～" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&h=400&q=80" alt="Fuutan ～いやし処～" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&h=400&q=80" alt="Fuutan ～いやし処～" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 掲載画像はイメージです</p>
+</div></section>
 
 <section class="flow" id="flow"><div class="wrap">
 <p class="label">Flow</p><h2 class="ttl">ご利用の流れ</h2>
@@ -83,7 +88,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <h2>まずはお気軽にご連絡ください</h2>
 <p>ご質問・ご予約はお電話にて承っています。</p>
 <div class="cta-phone">（要確認）</div>
-<div class="cta-hours">受付時間：営業時間内</div>
+<div class="cta-hours">受付時間：10:00〜21:00（最終受付 20:00）</div>
 <a href="tel:（要確認）" class="btn-y">今すぐ電話する</a>
 </div>
 
@@ -93,11 +98,10 @@ footer strong{color:rgba(255,255,255,.7)}
 <table class="tbl">
 <tr><th>店舗名</th><td>Fuutan ～いやし処～</td></tr>
 <tr><th>住所</th><td>〒847-0875 佐賀県唐津市西唐津２丁目６２０６−２８</td></tr>
-<tr><th>電話</th><td>（要確認）</td></tr>
-<tr><th>営業時間</th><td>（要確認）</td></tr>
-<tr><th>定休日</th><td>（要確認）</td></tr>
+<tr><th>電話</th><td><a href="tel:（要確認）" style="color:inherit">（要確認）</a></td></tr>
+<tr><th>平日</th><td>10:00〜21:00（最終受付 20:00）</td></tr><tr><th>土日祝</th><td>10:00〜21:00</td></tr><tr><th>定休日</th><td style="color:#e74c3c;font-weight:600">不定休</td></tr>
 </table></div>
-<div><div class="map-box"><div class="mi">📍</div><p>〒847-0875 佐賀県唐津市西唐津２</p></div></div>
+<div><iframe src="https://maps.google.com/maps?q=%E3%80%92847-0875%20%E4%BD%90%E8%B3%80%E7%9C%8C%E5%94%90%E6%B4%A5%E5%B8%82%E8%A5%BF%E5%94%90%E6%B4%A5%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%96%EF%BC%92%EF%BC%90%EF%BC%96%E2%88%92%EF%BC%92%EF%BC%98&output=embed&hl=ja&z=16" width="100%" height="380" style="border:0;border-radius:8px;display:block" allowfullscreen loading="lazy"></iframe></div>
 </div></div></section>
-<footer><strong>Fuutan ～いやし処～</strong><br>〒847-0875 佐賀県唐津市西唐津２丁目６２０６−２８<br><br>&copy; 2026 Fuutan ～いやし処～.</footer>
+<footer><strong>Fuutan ～いやし処～</strong><br>〒847-0875 佐賀県唐津市西唐津２丁目６２０６−２８<br><br>&copy; 2026 Fuutan ～いやし処～. All rights reserved.</footer>
 </body></html>

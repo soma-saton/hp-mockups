@@ -9,7 +9,7 @@ header{position:fixed;top:0;width:100%;background:#1a3a6cf5;backdrop-filter:blur
 .logo{font-family:'Noto Serif JP',serif;color:#fff;font-size:1rem}
 nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.78rem;margin-left:16px}
 @media(max-width:580px){nav{display:none}}
-.hero{min-height:90vh;background:linear-gradient(150deg,#1a3a6c,#2e5bba);display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
+.hero{min-height:90vh;background:linear-gradient(rgba(26,58,108,0.74),rgba(26,58,108,0.74)),url(https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1400&q=80) center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:56px;background:#eaf0fb;clip-path:ellipse(60% 100% at 50% 100%)}
 .hero-inner{position:relative;z-index:1;max-width:620px}
 .hi{font-size:5rem;display:block;margin-bottom:18px}
@@ -58,7 +58,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <span class="hi">📚</span>
 <h1>目標に向かって、一緒に走る<br><em>唐津ゼミナール</em></h1>
 <p>唐津で、地域の皆様に長く愛されてきた学習塾 個別指導です。<br>丁寧なサービスで、お客様一人ひとりに向き合います。</p>
-<div class="rb">⭐ 4 <span>(8件のクチコミ)</span></div>
+<div class="rb">★★★★☆ <b>4</b><span class="rc"> (8件のGoogleクチコミ)</span></div>
 <div class="btns"><a href="#feat" class="btn-y">サービス詳細</a><a href="#cta" class="btn-o">お問合せ</a></div>
 </div></div>
 
@@ -69,6 +69,11 @@ footer strong{color:rgba(255,255,255,.7)}
 <div class="fc"><div class="fc-icon">✨</div><h3>丁寧・確実な仕事</h3><p>一つひとつの仕事を丁寧に。お客様にご満足いただけるまで誠実に対応します。</p></div>
 <div class="fc"><div class="fc-icon">💬</div><h3>気軽に相談できる</h3><p>小さなことでもお気軽にご相談ください。まずはお話を聞かせていただきます。</p></div>
 </div></div></section>
+
+<section id="gallery-sec"><div class="wrap">
+<p class="label">Gallery</p><h2 class="ttl">サービスの様子</h2>
+<div class="gallery"><div class="gi"><img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&h=400&q=80" alt="唐津ゼミナール" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&h=400&q=80" alt="唐津ゼミナール" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&h=400&q=80" alt="唐津ゼミナール" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 掲載画像はイメージです</p>
+</div></section>
 
 <section class="flow" id="flow"><div class="wrap">
 <p class="label">Flow</p><h2 class="ttl">ご利用の流れ</h2>
@@ -83,7 +88,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <h2>まずはお気軽にご連絡ください</h2>
 <p>ご質問・ご予約はお電話にて承っています。</p>
 <div class="cta-phone">0955-74-8398</div>
-<div class="cta-hours">受付時間：営業時間内</div>
+<div class="cta-hours">受付時間：14:00〜21:30</div>
 <a href="tel:0955-74-8398" class="btn-y">今すぐ電話する</a>
 </div>
 
@@ -93,11 +98,10 @@ footer strong{color:rgba(255,255,255,.7)}
 <table class="tbl">
 <tr><th>店舗名</th><td>唐津ゼミナール</td></tr>
 <tr><th>住所</th><td>〒847-0066 佐賀県唐津市大石町２４７２</td></tr>
-<tr><th>電話</th><td>0955-74-8398</td></tr>
-<tr><th>営業時間</th><td>（要確認）</td></tr>
-<tr><th>定休日</th><td>（要確認）</td></tr>
+<tr><th>電話</th><td><a href="tel:0955-74-8398" style="color:inherit">0955-74-8398</a></td></tr>
+<tr><th>平日</th><td>14:00〜21:30</td></tr><tr><th>土日祝</th><td>10:00〜17:00</td></tr><tr><th>定休日</th><td style="color:#e74c3c;font-weight:600">日曜日</td></tr>
 </table></div>
-<div><div class="map-box"><div class="mi">📍</div><p>〒847-0066 佐賀県唐津市大石町２</p></div></div>
+<div><iframe src="https://maps.google.com/maps?q=%E3%80%92847-0066%20%E4%BD%90%E8%B3%80%E7%9C%8C%E5%94%90%E6%B4%A5%E5%B8%82%E5%A4%A7%E7%9F%B3%E7%94%BA%EF%BC%92%EF%BC%94%EF%BC%97%EF%BC%92&output=embed&hl=ja&z=16" width="100%" height="380" style="border:0;border-radius:8px;display:block" allowfullscreen loading="lazy"></iframe></div>
 </div></div></section>
-<footer><strong>唐津ゼミナール</strong><br>〒847-0066 佐賀県唐津市大石町２４７２<br><br>&copy; 2026 唐津ゼミナール.</footer>
+<footer><strong>唐津ゼミナール</strong><br>〒847-0066 佐賀県唐津市大石町２４７２<br><br>&copy; 2026 唐津ゼミナール. All rights reserved.</footer>
 </body></html>
