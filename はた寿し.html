@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>はた寿し｜唐津 玄海灘の握り寿司・名物あなごにぎり</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hiragino Sans','Meiryo',sans-serif;color:#222;background:#faf7f2}
+a{color:inherit;text-decoration:none}
+
+/* HERO */
+.hero{position:relative;height:92vh;min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('photos/ChIJ9ZHA4mN4ajUR0vwCsjVJHqo_0.jpg') center/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(60,10,0,.5),rgba(20,0,0,.78))}
+.hero-inner{position:relative;z-index:1;color:#fff;padding:0 20px}
+.hero-en{font-size:.7rem;letter-spacing:.4em;color:#d4a060;margin-bottom:14px}
+.hero h1{font-size:clamp(2.8rem,9vw,5.5rem);font-weight:900;letter-spacing:.08em;margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.hero-sub{font-size:clamp(.9rem,2.5vw,1.1rem);color:#ddd;letter-spacing:.06em;line-height:1.85;margin-bottom:28px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:28px}
+.hbadge{border:1px solid rgba(212,160,96,.6);color:#d4a060;padding:6px 16px;border-radius:20px;font-size:.78rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.hero-tel{display:inline-flex;align-items:center;gap:8px;background:#8b1a00;color:#fff;padding:13px 30px;border-radius:40px;font-size:1.05rem;font-weight:700;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+.hero-rsv{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);color:#fff;padding:13px 24px;border-radius:40px;font-size:.9rem;backdrop-filter:blur(4px)}
+
+/* SECTIONS */
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+.sec-label{font-size:.72rem;letter-spacing:.22em;color:#9b4a10;margin-bottom:8px}
+.sec-ttl{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;margin-bottom:36px;color:#1a0800}
+
+/* ABOUT */
+.about{background:#fff;padding:70px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-img img{width:100%;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.img-note{font-size:.7rem;color:#bbb;margin-top:6px;text-align:right}
+.about-text p{font-size:.95rem;color:#555;line-height:1.95;margin-bottom:16px}
+.about-text strong{color:#8b1a00}
+
+/* MENU */
+.menu-sec{background:#fdf5ec;padding:70px 0}
+.menu-groups{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.menu-group h3{font-size:1rem;font-weight:700;color:#8b1a00;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e8d8c0}
+.menu-row{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px solid #f5ece0;font-size:.9rem}
+.menu-row .name{color:#333}
+.menu-row .name small{display:block;font-size:.74rem;color:#999;margin-top:2px}
+.menu-row .price{font-weight:700;color:#8b1a00;white-space:nowrap;margin-left:12px}
+.highlight-row{background:linear-gradient(90deg,rgba(212,160,96,.1),transparent)}
+.feature-box{background:#fff;border-left:4px solid #8b1a00;padding:20px 24px;border-radius:0 10px 10px 0;margin-top:30px;grid-column:1/-1}
+.feature-box h3{color:#8b1a00;font-size:1rem;margin-bottom:10px;font-weight:700}
+.feature-box p{font-size:.88rem;color:#666;line-height:1.85}
+
+/* COURSE */
+.course-sec{background:#1a0800;padding:70px 0;color:#fff}
+.course-sec .sec-ttl{color:#fff}
+.course-sec .sec-label{color:#d4a060}
+.course-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.course-card{border:1px solid rgba(212,160,96,.3);border-radius:14px;padding:30px 26px}
+.course-card h3{color:#d4a060;font-size:1.1rem;font-weight:800;margin-bottom:6px}
+.course-card .course-price{font-size:2rem;font-weight:900;color:#fff;margin-bottom:14px;line-height:1}
+.course-card p{font-size:.86rem;color:#bba;line-height:1.8}
+.course-card .note{font-size:.76rem;color:#887;margin-top:10px}
+
+/* GALLERY */
+.gallery-sec{background:#faf7f2;padding:70px 0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-radius:10px;overflow:hidden}
+.gallery img{width:100%;height:240px;object-fit:cover;display:block}
+
+/* REVIEWS */
+.rev-sec{background:#fff;padding:70px 0}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.rev-card{background:#fdf5ec;border-radius:12px;padding:24px}
+.rev-stars{color:#f5a623;margin-bottom:10px}
+.rev-text{color:#555;font-size:.87rem;line-height:1.85;font-style:italic;margin-bottom:12px}
+.rev-author{color:#bbb;font-size:.75rem;text-align:right}
+
+/* HOURS */
+.hours-sec{background:#faf7f2;padding:70px 0}
+.hours-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+table.htbl{width:100%;border-collapse:collapse;font-size:.9rem}
+table.htbl th,table.htbl td{padding:10px 14px;border-bottom:1px solid #f0e8d8;text-align:left}
+table.htbl th{color:#999;font-weight:500;width:80px}
+table.htbl td{font-weight:600;color:#1a0800}
+.closed{color:#e74c3c!important}
+.access-box dl{display:grid;grid-template-columns:80px 1fr;gap:10px 14px;font-size:.9rem}
+.access-box dt{color:#8b1a00;font-weight:700}
+.access-box dd{color:#555}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,#8b1a00,#b52800);color:#fff;text-align:center;padding:64px 20px}
+.cta h2{font-size:clamp(1.4rem,4vw,2rem);margin-bottom:10px}
+.cta p{opacity:.88;margin-bottom:24px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.cta-tel{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#8b1a00;padding:16px 40px;border-radius:40px;font-size:1.2rem;font-weight:800;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.cta-rsv{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.5);color:#fff;padding:16px 30px;border-radius:40px;font-size:.95rem}
+
+footer{background:#0a0400;color:#444;text-align:center;padding:28px 20px;font-size:.78rem}
+
+@media(max-width:680px){
+  .about-grid,.menu-groups,.hours-inner,.course-grid{grid-template-columns:1fr}
+  .feature-box{grid-column:1}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery img{height:160px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-en">HATA ZUSHI — KARATSU</div>
+    <h1>はた寿し</h1>
+    <p class="hero-sub">玄海灘の恵みを、大きなネタで豪快に<br>唐津の地酒と、職人の握りを</p>
+    <div class="hero-badges">
+      <span class="hbadge">名物：穴子にぎり</span>
+      <span class="hbadge">地酒豊富</span>
+      <span class="hbadge">会席コースあり</span>
+    </div>
+    <div class="hero-btns">
+      <a href="tel:0955753425" class="hero-tel">📞 0955-75-3425</a>
+      <a href="https://tabelog.com/saga/A4102/A410201/41001077/reserve/" target="_blank" class="hero-rsv" rel="noopener">📅 食べログ予約</a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="photos/ChIJ9ZHA4mN4ajUR0vwCsjVJHqo_1.jpg" alt="はた寿し 握り寿司">
+        <p class="img-note">※ 写真提供：Google マップ</p>
+      </div>
+      <div class="about-text">
+        <p class="sec-label">About</p>
+        <h2 class="sec-ttl">口からあふれる<br>玄海灘の恵み</h2>
+        <p>唐津が誇る<strong>玄海灘で獲れた新鮮な海鮮</strong>を、口から溢れるほどの大きなネタでご提供。「ケチらず、素材で勝負」という姿勢が、多くのリピーターを生み出しています。</p>
+        <p><strong>名物の穴子にぎりは約20cm</strong>。シャリからはみ出す豪快な一貫は、一度食べたら忘れられない看板メニューです。</p>
+        <p>大将と女将の気さくな人柄も評判で、地元常連客はもちろん、遠方からのファンも多い一軒です。佐賀の<strong>地酒ラインナップ</strong>も充実しており、ゆっくりと寿司と酒を楽しめます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-sec">
+  <div class="wrap">
+    <p class="sec-label">Menu</p>
+    <h2 class="sec-ttl">メニュー</h2>
+    <div class="menu-groups">
+      <div>
+        <h3>🍣 ランチ（平日限定）</h3>
+        <div class="menu-row highlight-row"><span class="name">にぎりランチ<small>吸い物・小鉢付き</small></span><span class="price">1,100円</span></div>
+        <div class="menu-row highlight-row"><span class="name">ちらしランチ<small>吸い物・小鉢付き</small></span><span class="price">1,100円</span></div>
+        <p style="font-size:.78rem;color:#999;margin-top:10px">※ 平日ランチのみ。11:30〜14:00（L.O.）</p>
+      </div>
+      <div>
+        <h3>🍱 にぎり・一品</h3>
+        <div class="menu-row"><span class="name">並にぎり<small>吸い物付き</small></span><span class="price">1,500円</span></div>
+        <div class="menu-row highlight-row"><span class="name">🏆 穴子にぎり（大）<small>約20cm・名物メニュー</small></span><span class="price">時価</span></div>
+        <div class="menu-row"><span class="name">特上にぎり<small>かんぱち・大トロ・ウニ・いくら等8種</small></span><span class="price">時価</span></div>
+        <div class="menu-row"><span class="name">イカ巻</span><span class="price">1,500円</span></div>
+        <div class="menu-row"><span class="name">佐賀牛たたき</span><span class="price">1,800円</span></div>
+        <div class="menu-row"><span class="name">車海老刺身</span><span class="price">600〜1,200円</span></div>
+        <div class="menu-row"><span class="name">茶碗蒸し</span><span class="price">500円</span></div>
+      </div>
+      <div class="feature-box">
+        <h3>🍶 地酒コーナー</h3>
+        <p>佐賀県の地酒を中心に、豊富なラインナップを取り揃えています。お好みに合わせた一本を大将にご相談ください。にぎり寿司との相性も折り紙付きです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSE -->
+<section class="course-sec">
+  <div class="wrap">
+    <p class="sec-label">Course</p>
+    <h2 class="sec-ttl">会席コース</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>会席コース（並）</h3>
+        <div class="course-price">4,500<span style="font-size:1rem;font-weight:400">円</span></div>
+        <p>前菜・刺身・焼物・煮物・握り寿司・吸物・デザートなど全7品。記念日・歓送迎会に。</p>
+        <p class="note">※ 要予約（前日までにお電話で）</p>
+      </div>
+      <div class="course-card">
+        <h3>会席コース（上）</h3>
+        <div class="course-price">6,000<span style="font-size:1rem;font-weight:400">円</span></div>
+        <p>より豪華な食材を使用した全7品。特別な記念日・接待・ご宴会に最適です。</p>
+        <p class="note">※ 要予約（前日までにお電話で）。個室・貸切（〜20名）相談可。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <div class="wrap">
+    <p class="sec-label">Gallery</p>
+    <h2 class="sec-ttl">お店の様子</h2>
+    <div class="gallery">
+      <img src="photos/ChIJ9ZHA4mN4ajUR0vwCsjVJHqo_0.jpg" alt="はた寿し" loading="lazy">
+      <img src="photos/ChIJ9ZHA4mN4ajUR0vwCsjVJHqo_1.jpg" alt="はた寿し 握り" loading="lazy">
+      <img src="photos/ChIJ9ZHA4mN4ajUR0vwCsjVJHqo_2.jpg" alt="はた寿し 店内" loading="lazy">
+    </div>
+    <p style="font-size:.7rem;color:#bbb;text-align:right;margin-top:8px">※ 写真提供：Google マップ</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="rev-sec">
+  <div class="wrap">
+    <p class="sec-label">Voice</p>
+    <h2 class="sec-ttl">お客様の声</h2>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">「料理も美味しく、大将、女将の人柄も良くてまた来たくなるお店です！地元の常連さんも気さくに話しかけてくれます。駅から歩いてすぐです。」</p>
+        <p class="rev-author">— かわさきゆんまさん（Google）</p>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">「ネタが新鮮✨上寿司をシャリ少なめで注文させて頂きご対応してもらえました。大将と奥様が素敵で常連客のご夫妻とも意気投合❣️とにかく大将と奥様が素敵です。」</p>
+        <p class="rev-author">— HIROKO OOKAWAさん（Google）</p>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">「気さくな大将と女将さん料理は美味しいですよ。お勧めの麦＆芋焼酎も飲みやすかった！リピートしたい一軒です。」</p>
+        <p class="rev-author">— minodaしんしんさん（Google）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & ACCESS -->
+<section class="hours-sec">
+  <div class="wrap">
+    <p class="sec-label">Hours & Access</p>
+    <h2 class="sec-ttl">営業時間・アクセス</h2>
+    <div class="hours-inner">
+      <div>
+        <h3 style="font-size:1rem;font-weight:700;color:#8b1a00;margin-bottom:14px">営業時間</h3>
+        <table class="htbl">
+          <tr><th>月曜日</th><td>11:30〜14:00 / 17:00〜21:30</td></tr>
+          <tr><th>火曜日</th><td class="closed">定休日</td></tr>
+          <tr><th>水曜日</th><td>11:30〜14:00 / 17:00〜21:30</td></tr>
+          <tr><th>木曜日</th><td>11:30〜14:00 / 17:00〜21:30</td></tr>
+          <tr><th>金曜日</th><td>11:30〜14:00 / 17:00〜21:30</td></tr>
+          <tr><th>土曜日</th><td>17:00〜21:30</td></tr>
+          <tr><th>日曜日</th><td>17:00〜21:30</td></tr>
+        </table>
+        <p style="font-size:.78rem;color:#999;margin-top:10px">L.O. 21:00。平日ランチは11:30〜14:00。</p>
+      </div>
+      <div class="access-box">
+        <h3 style="font-size:1rem;font-weight:700;color:#8b1a00;margin-bottom:14px">アクセス</h3>
+        <dl>
+          <dt>住所</dt><dd>佐賀県唐津市（詳細はお電話でご確認ください）</dd>
+          <dt>電話</dt><dd>0955-75-3425</dd>
+          <dt>席数</dt><dd>28席（カウンター6席）</dd>
+          <dt>個室</dt><dd>あり（〜20名）・貸切相談可</dd>
+          <dt>駐車場</dt><dd>5台</dd>
+          <dt>支払い</dt><dd>カード可・ネット予約可</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>ご予約・お問い合わせ</h2>
+  <p>会席コース（要予約）・個室・貸切はお電話にてご相談ください</p>
+  <div class="cta-btns">
+    <a href="tel:0955753425" class="cta-tel">📞 0955-75-3425</a>
+    <a href="https://tabelog.com/saga/A4102/A410201/41001077/reserve/" target="_blank" class="cta-rsv" rel="noopener">📅 食べログでネット予約</a>
+  </div>
+</div>
+
+<footer>
+  <p>はた寿し</p>
+  <p style="margin-top:6px">佐賀県唐津市</p>
+  <p style="margin-top:20px;font-size:.68rem;color:#333">このページはホームページ制作の提案サンプルです。</p>
+</footer>
+
+</body>
+</html>

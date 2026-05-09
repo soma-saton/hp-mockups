@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マルヒデ｜糸島・前原のフラワーショップ｜ブーケ・アレンジメント・ギフト</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hiragino Sans','Meiryo',sans-serif;color:#333;background:#fdf8f5}
+a{color:inherit;text-decoration:none}
+
+/* HERO */
+.hero{position:relative;height:92vh;min-height:540px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('photos/ChIJEXhWkMbpQTURZFmMvNoic3o_0.jpg') center/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(60,15,40,.55),rgba(20,5,15,.78))}
+.hero-inner{position:relative;z-index:1;color:#fff;padding:0 20px}
+.hero-en{font-size:.72rem;letter-spacing:.35em;color:#f4b8d0;margin-bottom:14px}
+.hero h1{font-size:clamp(2.6rem,8vw,5rem);font-weight:900;letter-spacing:.08em;margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.hero-sub{font-size:clamp(.88rem,2.2vw,1.05rem);color:#f0d0e0;letter-spacing:.06em;line-height:1.9;margin-bottom:26px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:26px}
+.hbadge{border:1px solid rgba(244,184,208,.6);color:#f4b8d0;padding:6px 16px;border-radius:20px;font-size:.78rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.hero-tel{display:inline-flex;align-items:center;gap:8px;background:#9b3060;color:#fff;padding:13px 30px;border-radius:40px;font-size:1.05rem;font-weight:700;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+.hero-mail{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);color:#fff;padding:13px 24px;border-radius:40px;font-size:.88rem}
+
+/* SECTIONS */
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.sec-label{font-size:.72rem;letter-spacing:.22em;color:#9b3060;margin-bottom:8px}
+.sec-ttl{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;margin-bottom:36px;color:#1a0812}
+
+/* ABOUT */
+.about{background:#fff;padding:70px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-img img{width:100%;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.img-note{font-size:.7rem;color:#bbb;margin-top:6px;text-align:right}
+.about-text p{font-size:.95rem;color:#555;line-height:1.95;margin-bottom:16px}
+.about-text strong{color:#9b3060}
+.rating-box{display:inline-flex;align-items:center;gap:12px;background:#fdf0f4;border:1px solid #f4c8d8;padding:12px 20px;border-radius:12px;margin-top:8px}
+.rating-box .score{font-size:2.2rem;font-weight:900;color:#9b3060;line-height:1}
+.rating-box .stars{color:#f5a623;font-size:.9rem;display:block}
+.rating-box .label{font-size:.78rem;color:#888;line-height:1.4}
+
+/* PRODUCTS */
+.products{background:#fdf8f5;padding:70px 0}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prod-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.07)}
+.prod-img{height:180px;object-fit:cover;width:100%;display:block}
+.prod-body{padding:20px 18px}
+.prod-body h3{font-size:1rem;font-weight:800;color:#1a0812;margin-bottom:6px}
+.prod-body p{font-size:.83rem;color:#777;line-height:1.7;margin-bottom:10px}
+.prod-price{font-size:1.05rem;font-weight:700;color:#9b3060}
+
+/* SCENES */
+.scenes{background:#1a0812;padding:70px 0;color:#fff}
+.scenes .sec-ttl{color:#fff}
+.scenes .sec-label{color:#f4b8d0}
+.scene-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.scene-card{text-align:center}
+.scene-icon{font-size:2.4rem;margin-bottom:14px}
+.scene-card h3{font-size:.95rem;font-weight:700;color:#f4b8d0;margin-bottom:8px}
+.scene-card p{font-size:.8rem;color:#ccc;line-height:1.7}
+
+/* GALLERY */
+.gallery-sec{background:#fdf8f5;padding:70px 0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-radius:10px;overflow:hidden}
+.gallery img{width:100%;height:240px;object-fit:cover;display:block}
+
+/* HOURS */
+.hours-sec{background:#fff;padding:70px 0}
+.hours-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+table.htbl{width:100%;border-collapse:collapse;font-size:.9rem}
+table.htbl th,table.htbl td{padding:10px 14px;border-bottom:1px solid #f5edf0;text-align:left}
+table.htbl th{color:#999;font-weight:500;width:80px}
+table.htbl td{font-weight:600;color:#1a0812}
+.closed{color:#e74c3c!important}
+.contact-box{background:#fdf0f4;border-radius:12px;padding:22px}
+.contact-box h3{font-size:.95rem;font-weight:700;color:#9b3060;margin-bottom:12px}
+.contact-box dl{display:grid;grid-template-columns:60px 1fr;gap:8px 12px;font-size:.88rem}
+.contact-box dt{color:#9b3060;font-weight:700}
+.contact-box dd{color:#555}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,#9b3060,#c04080);color:#fff;text-align:center;padding:64px 20px}
+.cta h2{font-size:clamp(1.4rem,4vw,2rem);margin-bottom:10px}
+.cta p{opacity:.88;margin-bottom:24px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.cta-tel{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#9b3060;padding:16px 36px;border-radius:40px;font-size:1.2rem;font-weight:800;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.cta-mail{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.5);color:#fff;padding:16px 28px;border-radius:40px;font-size:.92rem}
+
+footer{background:#0d0008;color:#444;text-align:center;padding:28px 20px;font-size:.78rem}
+
+@media(max-width:680px){
+  .about-grid,.hours-inner{grid-template-columns:1fr}
+  .prod-grid{grid-template-columns:1fr 1fr}
+  .scene-grid{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery img{height:160px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-en">FLOWER SHOP MARUHIDE — ITOSHIMA</div>
+    <h1>マルヒデ</h1>
+    <p class="hero-sub">糸島・前原のフラワーショップ<br>心を込めた花をあなたの大切な人へ</p>
+    <div class="hero-badges">
+      <span class="hbadge">ブーケ・アレンジメント</span>
+      <span class="hbadge">ウェディング</span>
+      <span class="hbadge">お悔やみ・お供え</span>
+      <span class="hbadge">Google評価 ★5.0</span>
+    </div>
+    <div class="hero-btns">
+      <a href="tel:0923232660" class="hero-tel">📞 092-323-2660</a>
+      <a href="mailto:maruhideaa0528@gmail.com" class="hero-mail">✉ メールで相談</a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="photos/ChIJEXhWkMbpQTURZFmMvNoic3o_1.jpg" alt="マルヒデ フラワーショップ">
+        <p class="img-note">※ 写真提供：Google マップ</p>
+      </div>
+      <div class="about-text">
+        <p class="sec-label">About</p>
+        <h2 class="sec-ttl">糸島で愛され続ける<br>地域のお花屋さん</h2>
+        <p>糸島市前原東にある<strong>マルヒデ</strong>。地域に根ざした花屋として、誕生日・記念日・冠婚葬祭まで、あらゆるシーンの花をお届けしています。</p>
+        <p><strong>フローリストが一点一点手作りするアレンジメント</strong>は、季節感とデザインを大切に制作。「どんな花が合うかわからない」という方も、お気軽にご相談ください。ご予算・用途・相手の好みに合わせたご提案をします。</p>
+        <div class="rating-box">
+          <div>
+            <div class="score">5.0</div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="label">Google評価<br>満点を獲得</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="wrap">
+    <p class="sec-label">Products</p>
+    <h2 class="sec-ttl">商品ラインナップ</h2>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <img src="photos/ChIJEXhWkMbpQTURZFmMvNoic3o_0.jpg" alt="フラワーアレンジメント" class="prod-img">
+        <div class="prod-body">
+          <h3>カラフルミックスアレンジ</h3>
+          <p>旬の花を組み合わせた色鮮やかなアレンジメント。誕生日・お祝い・プレゼントに。</p>
+          <div class="prod-price">4,400円〜</div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <img src="photos/ChIJEXhWkMbpQTURZFmMvNoic3o_1.jpg" alt="マザーズブーケ" class="prod-img">
+        <div class="prod-body">
+          <h3>マザーズブーケ</h3>
+          <p>母の日や感謝を伝えたいときに。カーネーションを中心とした心温まるブーケ。</p>
+          <div class="prod-price">4,400円〜</div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <img src="photos/ChIJEXhWkMbpQTURZFmMvNoic3o_2.jpg" alt="お悔やみ・お供え" class="prod-img">
+        <div class="prod-body">
+          <h3>お悔やみ・お供えアレンジ</h3>
+          <p>白を基調とした落ち着いたアレンジメント。ご法要・命日・お盆のお供えに。</p>
+          <div class="prod-price">3,300円〜</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:24px;background:#fff;border-radius:12px;padding:20px 24px;font-size:.88rem;color:#666;line-height:1.7">
+      ※ 上記は価格帯の目安です（3,300〜33,000円）。ご予算・用途に合わせてご提案しますので、お気軽にお電話またはメールでご相談ください。
+    </div>
+  </div>
+</section>
+
+<!-- SCENES -->
+<section class="scenes">
+  <div class="wrap">
+    <p class="sec-label">Occasions</p>
+    <h2 class="sec-ttl">どんな場面にも<br>花を添えて</h2>
+    <div class="scene-grid">
+      <div class="scene-card">
+        <div class="scene-icon">🎂</div>
+        <h3>誕生日・記念日</h3>
+        <p>大切な人への贈り物に。色・デザインもご相談に応じます。</p>
+      </div>
+      <div class="scene-card">
+        <div class="scene-icon">💒</div>
+        <h3>ウェディング</h3>
+        <p>ブーケ・会場装花・テーブルフラワー。特別な一日を花で彩ります。</p>
+      </div>
+      <div class="scene-card">
+        <div class="scene-icon">🏢</div>
+        <h3>開店・就任祝い</h3>
+        <p>スタンド花・アレンジメント。法人のご注文も承ります。</p>
+      </div>
+      <div class="scene-card">
+        <div class="scene-icon">🕯️</div>
+        <h3>お悔やみ・ご法要</h3>
+        <p>白・淡い色を基調としたアレンジ。心を込めてお作りします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <div class="wrap">
+    <p class="sec-label">Gallery</p>
+    <h2 class="sec-ttl">お花の様子</h2>
+    <div class="gallery">
+      <img src="photos/ChIJEXhWkMbpQTURZFmMvNoic3o_0.jpg" alt="マルヒデ アレンジメント" loading="lazy">
+      <img src="photos/ChIJEXhWkMbpQTURZFmMvNoic3o_1.jpg" alt="マルヒデ ブーケ" loading="lazy">
+      <img src="photos/ChIJEXhWkMbpQTURZFmMvNoic3o_2.jpg" alt="マルヒデ 店内" loading="lazy">
+    </div>
+    <p style="font-size:.7rem;color:#bbb;text-align:right;margin-top:8px">※ 写真提供：Google マップ</p>
+  </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="hours-sec">
+  <div class="wrap">
+    <p class="sec-label">Hours & Contact</p>
+    <h2 class="sec-ttl">営業時間・連絡先</h2>
+    <div class="hours-inner">
+      <div>
+        <h3 style="font-size:1rem;font-weight:700;color:#9b3060;margin-bottom:14px">営業時間</h3>
+        <table class="htbl">
+          <tr><th>月曜日</th><td class="closed">定休日</td></tr>
+          <tr><th>火曜日</th><td>9:00〜20:00</td></tr>
+          <tr><th>水曜日</th><td>9:00〜20:00</td></tr>
+          <tr><th>木曜日</th><td>9:00〜20:00</td></tr>
+          <tr><th>金曜日</th><td>9:00〜20:00</td></tr>
+          <tr><th>土曜日</th><td>9:00〜20:00</td></tr>
+          <tr><th>日曜日</th><td>9:00〜20:00</td></tr>
+        </table>
+        <p style="font-size:.78rem;color:#999;margin-top:10px">月曜定休。ご注文・ご相談はお電話またはメールにて承ります。</p>
+      </div>
+      <div class="contact-box">
+        <h3>📍 店舗情報・お問い合わせ</h3>
+        <dl>
+          <dt>住所</dt><dd>福岡県糸島市前原東3-14</dd>
+          <dt>電話</dt><dd>092-323-2660</dd>
+          <dt>メール</dt><dd>maruhideaa0528@gmail.com</dd>
+          <dt>最寄駅</dt><dd>JR筑前前原駅より徒歩圏内</dd>
+        </dl>
+        <div style="margin-top:16px;font-size:.82rem;color:#888;line-height:1.6">
+          ご注文は当日でもお気軽にどうぞ。配達・配送のご相談も承ります。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>ご注文・お問い合わせ</h2>
+  <p>ご予算・用途をお伝えいただければ、最適なご提案をします</p>
+  <div class="cta-btns">
+    <a href="tel:0923232660" class="cta-tel">📞 092-323-2660</a>
+    <a href="mailto:maruhideaa0528@gmail.com" class="cta-mail">✉ maruhideaa0528@gmail.com</a>
+  </div>
+</div>
+
+<footer>
+  <p>（有）マルヒデ</p>
+  <p style="margin-top:6px">〒819-1116 福岡県糸島市前原東3-14</p>
+  <p style="margin-top:20px;font-size:.68rem;color:#333">このページはホームページ制作の提案サンプルです。</p>
+</footer>
+
+</body>
+</html>

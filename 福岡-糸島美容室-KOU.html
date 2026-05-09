@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>糸島美容室 KOU｜前原の完全予約制ヘアサロン｜Google評価4.9</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hiragino Sans','Meiryo',sans-serif;color:#333;background:#f9f5f2}
+a{color:inherit;text-decoration:none}
+
+/* HERO */
+.hero{position:relative;height:92vh;min-height:540px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('photos/ChIJO5TP6QLpQTURT5l058xqkwg_0.jpg') center/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(20,10,5,.5),rgba(10,5,0,.78))}
+.hero-inner{position:relative;z-index:1;color:#fff;padding:0 20px}
+.hero-en{font-size:.72rem;letter-spacing:.35em;color:#c8a08c;margin-bottom:14px}
+.hero h1{font-size:clamp(2.8rem,9vw,5.5rem);font-weight:900;letter-spacing:.06em;line-height:1.05;margin-bottom:16px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.hero-sub{font-size:clamp(.88rem,2.2vw,1.05rem);color:#ddd;letter-spacing:.06em;line-height:1.9;margin-bottom:26px}
+.hero-star{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);padding:7px 18px;border-radius:20px;font-size:.82rem;color:#f5d48a;margin-bottom:24px}
+.hero-tel{display:inline-flex;align-items:center;gap:8px;background:#8b4a28;color:#fff;padding:13px 34px;border-radius:40px;font-size:1.05rem;font-weight:700;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+.hero-note{font-size:.74rem;color:rgba(255,255,255,.6);margin-top:12px}
+
+/* SECTIONS */
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.sec-label{font-size:.72rem;letter-spacing:.22em;color:#9b6040;margin-bottom:8px}
+.sec-ttl{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;margin-bottom:36px;color:#1a0c08}
+
+/* CONCEPT */
+.concept{background:#fff;padding:70px 0}
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.concept-img img{width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.img-note{font-size:.7rem;color:#bbb;margin-top:6px;text-align:right}
+.concept-text p{font-size:.95rem;color:#555;line-height:1.95;margin-bottom:16px}
+.concept-text strong{color:#8b4a28}
+.rating-badge{display:inline-flex;align-items:center;gap:10px;background:#fdf5ec;border:1px solid #e8d0b0;padding:12px 20px;border-radius:12px;margin-top:8px}
+.rating-badge .score{font-size:2rem;font-weight:900;color:#8b4a28;line-height:1}
+.rating-badge .label{font-size:.8rem;color:#888;line-height:1.5}
+.rating-badge .stars{color:#f5a623;font-size:.9rem}
+
+/* FEATURES */
+.features{background:#f9f5f2;padding:70px 0}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-card{background:#fff;border-radius:14px;padding:28px 22px;text-align:center;box-shadow:0 2px 16px rgba(0,0,0,.06)}
+.feat-icon{font-size:2.2rem;margin-bottom:14px}
+.feat-card h3{font-size:1rem;font-weight:800;color:#1a0c08;margin-bottom:10px}
+.feat-card p{font-size:.84rem;color:#777;line-height:1.8}
+.feat-accent{color:#8b4a28;font-weight:700}
+
+/* MENU */
+.menu-sec{background:#fff;padding:70px 0}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.menu-col h3{font-size:1rem;font-weight:700;color:#8b4a28;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e8d8cc}
+.menu-row{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px solid #f5ede8;font-size:.9rem}
+.menu-row .name{color:#333}
+.menu-row .name small{display:block;font-size:.74rem;color:#999;margin-top:2px}
+.menu-row .price{color:#8b4a28;font-weight:700;white-space:nowrap;margin-left:12px}
+.menu-note{font-size:.8rem;color:#999;margin-top:20px;grid-column:1/-1}
+
+/* GALLERY */
+.gallery-sec{background:#f9f5f2;padding:70px 0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-radius:10px;overflow:hidden}
+.gallery img{width:100%;height:240px;object-fit:cover;display:block}
+
+/* REVIEWS */
+.rev-sec{background:#1a0c08;padding:70px 0;color:#fff}
+.rev-sec .sec-ttl{color:#fff}
+.rev-sec .sec-label{color:#c8a08c}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.rev-card{background:#2d1a12;border-radius:12px;padding:24px;border:1px solid rgba(200,160,140,.12)}
+.rev-stars{color:#f5a623;margin-bottom:10px}
+.rev-text{color:#ccc;font-size:.87rem;line-height:1.85;font-style:italic;margin-bottom:12px}
+.rev-author{color:#888;font-size:.75rem;text-align:right}
+
+/* HOURS */
+.hours-sec{background:#fff;padding:70px 0}
+.hours-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+table.htbl{width:100%;border-collapse:collapse;font-size:.9rem}
+table.htbl th,table.htbl td{padding:10px 14px;border-bottom:1px solid #f5ede8;text-align:left}
+table.htbl th{color:#999;font-weight:500;width:80px}
+table.htbl td{font-weight:600;color:#1a0c08}
+.access-box dl{display:grid;grid-template-columns:80px 1fr;gap:10px 14px;font-size:.9rem}
+.access-box dt{color:#8b4a28;font-weight:700}
+.access-box dd{color:#555}
+.rsv-box{background:#fdf5ec;border-radius:12px;padding:20px;margin-top:20px}
+.rsv-box h3{font-size:.9rem;font-weight:700;color:#8b4a28;margin-bottom:8px}
+.rsv-box p{font-size:.84rem;color:#666;line-height:1.7}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,#8b4a28,#b56040);color:#fff;text-align:center;padding:64px 20px}
+.cta h2{font-size:clamp(1.4rem,4vw,2rem);margin-bottom:10px}
+.cta p{opacity:.88;margin-bottom:24px}
+.cta-tel{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#8b4a28;padding:16px 44px;border-radius:40px;font-size:1.25rem;font-weight:800;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+
+footer{background:#0a0504;color:#444;text-align:center;padding:28px 20px;font-size:.78rem}
+
+@media(max-width:680px){
+  .concept-grid,.menu-grid,.hours-inner{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery img{height:160px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-en">HAIR SALON KOU — ITOSHIMA</div>
+    <h1>KOU</h1>
+    <p class="hero-sub">糸島・前原西の完全予約制ヘアサロン<br>「1度行ったらもう他のお店には行けない」</p>
+    <div class="hero-star">⭐ Google評価 4.9 — 地域最高水準</div>
+    <a href="tel:0923329171" class="hero-tel">📞 092-332-9171</a>
+    <p class="hero-note">完全予約制のため、まずはお電話でご相談ください</p>
+  </div>
+</div>
+
+<!-- CONCEPT -->
+<section class="concept">
+  <div class="wrap">
+    <div class="concept-grid">
+      <div class="concept-img">
+        <img src="photos/ChIJO5TP6QLpQTURT5l058xqkwg_1.jpg" alt="糸島美容室KOU 店内">
+        <p class="img-note">※ 写真提供：Google マップ</p>
+      </div>
+      <div class="concept-text">
+        <p class="sec-label">Concept</p>
+        <h2 class="sec-ttl">技術と人柄で<br>選ばれるサロン</h2>
+        <p>糸島市前原西にある<strong>完全予約制の美容室</strong>です。2016年のオープン以来、「高速で30分以上かかってでも通いたくなる」と言わせる技術力と、アットホームな雰囲気で多くのファンを獲得しています。</p>
+        <p>オーナーと元気なスタッフが作り出す<strong>居心地の良い空間</strong>は、ただカットに来るだけでなく「元気をもらえる場所」として、親子で通うお客様も多数。親子でお世話になっている方も少なくありません。</p>
+        <div class="rating-badge">
+          <div>
+            <div class="score">4.9</div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="label">Google評価<br>（9件の口コミ）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="wrap">
+    <p class="sec-label">Features</p>
+    <h2 class="sec-ttl">KOUが選ばれる<br>3つの理由</h2>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon">✂️</div>
+        <h3>高い技術力</h3>
+        <p>「店長の技術の高さはもちろん」と口コミで評される確かな腕。カット・カラー・パーマ全ての施術に妥協しません。</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">😊</div>
+        <h3>アットホームな空間</h3>
+        <p><span class="feat-accent">スタッフの人柄</span>が生み出す居心地の良さ。初めての方でもすぐにリラックスできる、あたたかい雰囲気です。</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📅</div>
+        <h3>完全予約制</h3>
+        <p>待ち時間なしの<span class="feat-accent">完全予約制</span>で、ゆっくりと施術に集中できます。まずはお電話でお気軽にご相談ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-sec">
+  <div class="wrap">
+    <p class="sec-label">Menu</p>
+    <h2 class="sec-ttl">メニュー・料金</h2>
+    <div class="menu-grid">
+      <div>
+        <h3>✂️ カット</h3>
+        <div class="menu-row"><span class="name">カット<small>シャンプー・ブロー込み</small></span><span class="price">要問合せ</span></div>
+        <div class="menu-row"><span class="name">カット＋トリートメント</span><span class="price">要問合せ</span></div>
+        <div class="menu-row"><span class="name">子供カット</span><span class="price">要問合せ</span></div>
+      </div>
+      <div>
+        <h3>🎨 カラー・パーマ</h3>
+        <div class="menu-row"><span class="name">カラー（全体）<small>白髪染め・ファッションカラー</small></span><span class="price">要問合せ</span></div>
+        <div class="menu-row"><span class="name">ハイライト・バレイヤージュ</span><span class="price">要問合せ</span></div>
+        <div class="menu-row"><span class="name">パーマ</span><span class="price">要問合せ</span></div>
+        <div class="menu-row"><span class="name">縮毛矯正</span><span class="price">要問合せ</span></div>
+      </div>
+      <p class="menu-note">※ 料金の詳細はお電話にてご確認ください。ご予算やご要望に合わせてご提案いたします。</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <div class="wrap">
+    <p class="sec-label">Gallery</p>
+    <h2 class="sec-ttl">サロンの雰囲気</h2>
+    <div class="gallery">
+      <img src="photos/ChIJO5TP6QLpQTURT5l058xqkwg_0.jpg" alt="糸島美容室KOU" loading="lazy">
+      <img src="photos/ChIJO5TP6QLpQTURT5l058xqkwg_1.jpg" alt="糸島美容室KOU 施術" loading="lazy">
+      <img src="photos/ChIJO5TP6QLpQTURT5l058xqkwg_2.jpg" alt="糸島美容室KOU 店内" loading="lazy">
+    </div>
+    <p style="font-size:.7rem;color:#bbb;text-align:right;margin-top:8px">※ 写真提供：Google マップ</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="rev-sec">
+  <div class="wrap">
+    <p class="sec-label">Voice</p>
+    <h2 class="sec-ttl">お客様の声</h2>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">「とても居心地のいいお客さんがいっぱいの美容室👏店長の技術の高さはもちろん、スタッフさんの人柄やアットホームな雰囲気がこの状況を生み出している感じがもろに伝わります😆高速で30分以上かかってでも通いたくなる美容室✨✨」</p>
+        <p class="rev-author">— 芳彰桑野さん（Google）</p>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">「いつも親子でお世話になっています。1度行ったらもう他のお店には行けません。いろんな相談に乗ってくれるしみんなのことが好きになります☺」</p>
+        <p class="rev-author">— Sa- Mi-さん（Google）</p>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">「癒しのオーナーさんと元気なパワー全開の店長さんが居る美容室✨行くと何かしら気づきをもらえると思いますよ〜😆💕要予約制なので、しっかり予約をして行かれてください🙇‍♀️」</p>
+        <p class="rev-author">— 伊藤純さん（Google）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & ACCESS -->
+<section class="hours-sec">
+  <div class="wrap">
+    <p class="sec-label">Hours & Access</p>
+    <h2 class="sec-ttl">営業時間・アクセス</h2>
+    <div class="hours-inner">
+      <div>
+        <h3 style="font-size:1rem;font-weight:700;color:#8b4a28;margin-bottom:14px">営業時間</h3>
+        <table class="htbl">
+          <tr><th>月曜日</th><td>9:30〜18:00</td></tr>
+          <tr><th>火曜日</th><td>9:30〜18:00</td></tr>
+          <tr><th>水曜日</th><td>9:30〜18:00</td></tr>
+          <tr><th>木曜日</th><td>9:30〜18:00</td></tr>
+          <tr><th>金曜日</th><td>9:30〜18:00</td></tr>
+          <tr><th>土曜日</th><td>9:30〜17:00</td></tr>
+          <tr><th>日曜日</th><td>9:30〜17:00</td></tr>
+        </table>
+        <div class="rsv-box">
+          <h3>📅 ご予約について</h3>
+          <p>完全予約制のため、ご来店前に必ずお電話でご予約ください。当日・直前のご予約もご相談可能です。まずはお気軽にどうぞ。</p>
+        </div>
+      </div>
+      <div class="access-box">
+        <h3 style="font-size:1rem;font-weight:700;color:#8b4a28;margin-bottom:14px">アクセス</h3>
+        <dl>
+          <dt>住所</dt><dd>福岡県糸島市前原西1-11-11<br>15JkアベニューA</dd>
+          <dt>電話</dt><dd>092-332-9171</dd>
+          <dt>最寄駅</dt><dd>JR筑前前原駅より徒歩圏内</dd>
+          <dt>予約</dt><dd>完全予約制（お電話にて）</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>ご予約・お問い合わせ</h2>
+  <p>完全予約制です。まずはお電話でお気軽にご相談ください。</p>
+  <a href="tel:0923329171" class="cta-tel">📞 092-332-9171</a>
+</div>
+
+<footer>
+  <p>福岡 糸島美容室 KOU</p>
+  <p style="margin-top:6px">〒819-1117 福岡県糸島市前原西1-11-11 15JkアベニューA</p>
+  <p style="margin-top:20px;font-size:.68rem;color:#333">このページはホームページ制作の提案サンプルです。</p>
+</footer>
+
+</body>
+</html>

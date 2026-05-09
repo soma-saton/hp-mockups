@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>いとしま鍼灸整骨院｜糸島・前原西 年中無休・施術累計3万人</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hiragino Sans','Meiryo',sans-serif;color:#222;background:#f4f7f5}
+a{color:inherit;text-decoration:none}
+
+/* HERO */
+.hero{position:relative;height:90vh;min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('photos/ChIJXTSkmKfpQTURgPZDfYT4ajo_0.jpg') center/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,40,30,.6),rgba(0,20,15,.82))}
+.hero-inner{position:relative;z-index:1;color:#fff;padding:0 20px}
+.hero-en{font-size:.7rem;letter-spacing:.3em;color:#7dd4b8;margin-bottom:14px}
+.hero h1{font-size:clamp(1.8rem,5.5vw,3.4rem);font-weight:900;letter-spacing:.06em;line-height:1.2;margin-bottom:16px;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.hero-sub{font-size:clamp(.88rem,2.2vw,1.05rem);color:#cde;letter-spacing:.05em;line-height:1.9;margin-bottom:26px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:26px}
+.hbadge{border:1px solid rgba(125,212,184,.5);color:#7dd4b8;padding:6px 16px;border-radius:20px;font-size:.78rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.hero-tel{display:inline-flex;align-items:center;gap:8px;background:#006b50;color:#fff;padding:13px 30px;border-radius:40px;font-size:1.05rem;font-weight:700;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+.hero-hours{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;padding:13px 24px;border-radius:40px;font-size:.88rem}
+
+/* SECTIONS */
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+.sec-label{font-size:.72rem;letter-spacing:.22em;color:#006b50;margin-bottom:8px}
+.sec-ttl{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;margin-bottom:36px;color:#001a12}
+
+/* ABOUT */
+.about{background:#fff;padding:70px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-img img{width:100%;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.img-note{font-size:.7rem;color:#bbb;margin-top:6px;text-align:right}
+.about-text p{font-size:.95rem;color:#555;line-height:1.95;margin-bottom:16px}
+.about-text strong{color:#006b50}
+.stats{display:flex;gap:28px;margin-top:20px;flex-wrap:wrap}
+.stat-item .num{font-size:2.4rem;font-weight:900;color:#006b50;line-height:1}
+.stat-item .label{font-size:.76rem;color:#888;margin-top:4px}
+
+/* STAFF */
+.staff-sec{background:#f4f7f5;padding:70px 0}
+.staff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.staff-card{background:#fff;border-radius:14px;padding:28px 22px;text-align:center;box-shadow:0 2px 14px rgba(0,0,0,.06)}
+.staff-icon{font-size:2.4rem;margin-bottom:14px}
+.staff-card h3{font-size:1rem;font-weight:800;color:#001a12;margin-bottom:6px}
+.staff-title{font-size:.76rem;color:#006b50;font-weight:700;margin-bottom:12px;letter-spacing:.06em}
+.staff-card p{font-size:.84rem;color:#777;line-height:1.8}
+.staff-accent{color:#006b50;font-weight:700}
+
+/* MENU */
+.menu-sec{background:#fff;padding:70px 0}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.menu-col h3{font-size:1rem;font-weight:700;color:#006b50;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #d0e8e0}
+.menu-row{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px solid #f0f5f2;font-size:.9rem}
+.menu-row .name{color:#333}
+.menu-row .name small{display:block;font-size:.74rem;color:#999;margin-top:2px}
+.menu-note{font-size:.8rem;color:#999;margin-top:20px;grid-column:1/-1;text-align:center}
+
+/* GALLERY */
+.gallery-sec{background:#f4f7f5;padding:70px 0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-radius:10px;overflow:hidden}
+.gallery img{width:100%;height:240px;object-fit:cover;display:block}
+
+/* HOURS */
+.hours-sec{background:#001a12;padding:70px 0;color:#fff}
+.hours-sec .sec-ttl{color:#fff}
+.hours-sec .sec-label{color:#7dd4b8}
+.hours-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+table.htbl{width:100%;border-collapse:collapse;font-size:.9rem}
+table.htbl th,table.htbl td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left}
+table.htbl th{color:#7dd4b8;font-weight:500;width:90px}
+table.htbl td{font-weight:600;color:#e8f5f0}
+.always-open{color:#7dd4b8;font-weight:700}
+.parking-note{background:rgba(125,212,184,.1);border:1px solid rgba(125,212,184,.3);border-radius:10px;padding:16px;margin-top:20px;font-size:.85rem;color:#aad}
+.access-box dl{display:grid;grid-template-columns:80px 1fr;gap:10px 14px;font-size:.9rem}
+.access-box dt{color:#7dd4b8;font-weight:700}
+.access-box dd{color:#ccc}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,#006b50,#009070);color:#fff;text-align:center;padding:64px 20px}
+.cta h2{font-size:clamp(1.4rem,4vw,2rem);margin-bottom:10px}
+.cta p{opacity:.88;margin-bottom:24px}
+.cta-tel{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#006b50;padding:16px 44px;border-radius:40px;font-size:1.25rem;font-weight:800;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.cta-note{font-size:.8rem;opacity:.75;margin-top:14px}
+
+footer{background:#00100a;color:#444;text-align:center;padding:28px 20px;font-size:.78rem}
+
+@media(max-width:680px){
+  .about-grid,.menu-grid,.hours-inner{grid-template-columns:1fr}
+  .staff-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery img{height:160px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-en">ITOSHIMA SHINKYU SEIKOTSU-IN</div>
+    <h1>いとしま<br>鍼灸整骨院</h1>
+    <p class="hero-sub">施術累計3万人・スペシャリスト3名体制<br>東洋医学と西洋医学を組み合わせた複合施術</p>
+    <div class="hero-badges">
+      <span class="hbadge">年中無休 9:00〜21:00</span>
+      <span class="hbadge">施術累計3万人</span>
+      <span class="hbadge">駐車場15台</span>
+    </div>
+    <div class="hero-btns">
+      <a href="tel:0923329747" class="hero-tel">📞 092-332-9747</a>
+      <span class="hero-hours">🕘 毎日 9:00〜21:00</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="photos/ChIJXTSkmKfpQTURgPZDfYT4ajo_1.jpg" alt="いとしま鍼灸整骨院 施術">
+        <p class="img-note">※ 写真提供：Google マップ</p>
+      </div>
+      <div class="about-text">
+        <p class="sec-label">About</p>
+        <h2 class="sec-ttl">東洋と西洋を<br>組み合わせた複合施術</h2>
+        <p>糸島市前原西にある<strong>いとしま鍼灸整骨院</strong>。40年以上のキャリアを持つ鍼灸師と、22歳にして院長となった実力派整骨師が在籍する、スペシャリスト3名体制のクリニックです。</p>
+        <p>東洋医学（鍼灸）と西洋医学（整骨・接骨）を組み合わせた<strong>複合施術</strong>が最大の特徴。肩こり・腰痛・スポーツ障害から、美容鍼・産後骨盤矯正まで、幅広い症状に対応します。</p>
+        <p>土日祝日も<strong>年中無休で9時〜21時</strong>まで営業。仕事帰りや休日のご来院も大歓迎です。無料相談受付中。</p>
+        <div class="stats">
+          <div class="stat-item"><div class="num">3万人<span style="font-size:1rem">+</span></div><div class="label">施術累計</div></div>
+          <div class="stat-item"><div class="num">40年</div><div class="label">鍼灸院長のキャリア</div></div>
+          <div class="stat-item"><div class="num">15台</div><div class="label">無料駐車場</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAFF -->
+<section class="staff-sec">
+  <div class="wrap">
+    <p class="sec-label">Staff</p>
+    <h2 class="sec-ttl">スペシャリスト3名体制</h2>
+    <div class="staff-grid">
+      <div class="staff-card">
+        <div class="staff-icon">🧘</div>
+        <h3>鍼灸院長</h3>
+        <div class="staff-title">40年以上のキャリア</div>
+        <p>40年以上の経験を持つ<span class="staff-accent">鍼灸のスペシャリスト</span>。慢性的な痛み・不定愁訴・美容鍼まで、東洋医学の深い知見で丁寧に施術します。</p>
+      </div>
+      <div class="staff-card">
+        <div class="staff-icon">💪</div>
+        <h3>整骨院長</h3>
+        <div class="staff-title">22歳で院長就任・実力派</div>
+        <p>若くして院長になった<span class="staff-accent">実力派の整骨師</span>。整形外科での経験も持ち、スポーツ障害・急性期の外傷から慢性疾患まで対応します。</p>
+      </div>
+      <div class="staff-card">
+        <div class="staff-icon">🏃</div>
+        <h3>スポーツトレーナー</h3>
+        <div class="staff-title">プロ選手トレーナー経験あり</div>
+        <p>プロアスリートのトレーナー経験を持つスタッフが、<span class="staff-accent">スポーツ障害・フォーム改善・パフォーマンスアップ</span>までサポートします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-sec">
+  <div class="wrap">
+    <p class="sec-label">Menu</p>
+    <h2 class="sec-ttl">施術メニュー</h2>
+    <div class="menu-grid">
+      <div>
+        <h3>🦴 整骨・鍼灸</h3>
+        <div class="menu-row"><span class="name">接骨・整骨<small>骨折・捻挫・打撲・肉離れ</small></span></div>
+        <div class="menu-row"><span class="name">鍼灸施術<small>肩こり・腰痛・慢性疲労・不調</small></span></div>
+        <div class="menu-row"><span class="name">整体・カイロプラクティック<small>姿勢矯正・骨盤矯正</small></span></div>
+        <div class="menu-row"><span class="name">産後骨盤矯正<small>産後のゆがみ・体型戻しに</small></span></div>
+        <div class="menu-row"><span class="name">スポーツトレーニング<small>フォーム改善・パフォーマンスUP</small></span></div>
+      </div>
+      <div>
+        <h3>✨ 美容・リラクゼーション</h3>
+        <div class="menu-row"><span class="name">美容鍼<small>フェイスアップ・しみ・シワ対応</small></span></div>
+        <div class="menu-row"><span class="name">オイルマッサージ<small>むくみ・冷え性・疲労回復</small></span></div>
+        <div class="menu-row"><span class="name">リラクゼーションマッサージ<small>全身の疲れをほぐす</small></span></div>
+        <div class="menu-row"><span class="name">マッサージ（部分）<small>肩・腰・脚など</small></span></div>
+      </div>
+      <p class="menu-note">※ 料金はお電話またはご来院時にご確認ください。初回無料相談受付中。</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <div class="wrap">
+    <p class="sec-label">Gallery</p>
+    <h2 class="sec-ttl">院内の様子</h2>
+    <div class="gallery">
+      <img src="photos/ChIJXTSkmKfpQTURgPZDfYT4ajo_0.jpg" alt="いとしま鍼灸整骨院" loading="lazy">
+      <img src="photos/ChIJXTSkmKfpQTURgPZDfYT4ajo_1.jpg" alt="いとしま鍼灸整骨院 施術室" loading="lazy">
+      <img src="photos/ChIJXTSkmKfpQTURgPZDfYT4ajo_2.jpg" alt="いとしま鍼灸整骨院 待合室" loading="lazy">
+    </div>
+    <p style="font-size:.7rem;color:#bbb;text-align:right;margin-top:8px">※ 写真提供：Google マップ</p>
+  </div>
+</section>
+
+<!-- HOURS & ACCESS -->
+<section class="hours-sec">
+  <div class="wrap">
+    <p class="sec-label">Hours & Access</p>
+    <h2 class="sec-ttl">営業時間・アクセス</h2>
+    <div class="hours-inner">
+      <div>
+        <h3 style="font-size:1rem;font-weight:700;color:#7dd4b8;margin-bottom:14px">営業時間</h3>
+        <table class="htbl">
+          <tr><th>月曜日</th><td class="always-open">9:00〜21:00</td></tr>
+          <tr><th>火曜日</th><td class="always-open">9:00〜21:00</td></tr>
+          <tr><th>水曜日</th><td class="always-open">9:00〜21:00</td></tr>
+          <tr><th>木曜日</th><td class="always-open">9:00〜21:00</td></tr>
+          <tr><th>金曜日</th><td class="always-open">9:00〜21:00</td></tr>
+          <tr><th>土曜日</th><td class="always-open">9:00〜21:00</td></tr>
+          <tr><th>日曜日</th><td class="always-open">9:00〜21:00</td></tr>
+        </table>
+        <div class="parking-note">
+          🚗 無料駐車場15台完備<br>年中無休・祝日も通常営業
+        </div>
+      </div>
+      <div class="access-box">
+        <h3 style="font-size:1rem;font-weight:700;color:#7dd4b8;margin-bottom:14px">アクセス</h3>
+        <dl>
+          <dt>住所</dt><dd>福岡県糸島市前原西2丁目15-5</dd>
+          <dt>電話</dt><dd>092-332-9747</dd>
+          <dt>最寄駅</dt><dd>JR筑前前原駅 徒歩9分（660m）</dd>
+          <dt>駐車場</dt><dd>無料15台</dd>
+          <dt>相談</dt><dd>初回無料相談受付中</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>ご予約・無料相談</h2>
+  <p>お身体のお悩み、まずはお気軽にご相談ください。年中無休・9〜21時営業。</p>
+  <a href="tel:0923329747" class="cta-tel">📞 092-332-9747</a>
+  <p class="cta-note">毎日 9:00〜21:00 受付（年中無休・土日祝OK）</p>
+</div>
+
+<footer>
+  <p>いとしま鍼灸整骨院</p>
+  <p style="margin-top:6px">〒819-1117 福岡県糸島市前原西2丁目15-5</p>
+  <p style="margin-top:20px;font-size:.68rem;color:#333">このページはホームページ制作の提案サンプルです。</p>
+</footer>
+
+</body>
+</html>

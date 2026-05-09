@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>居酒屋らしく｜糸島・前原の焼き鳥・串揚げ・おでん</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hiragino Sans','Meiryo',sans-serif;color:#333;background:#1a1008}
+a{color:inherit;text-decoration:none}
+
+/* ─── HERO ─── */
+.hero{position:relative;height:92vh;min-height:540px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('photos/ChIJjSZpHlmTQTUR_Lj5QAjChSw_0.jpg') center/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(30,10,0,.7) 0%,rgba(0,0,0,.75) 100%)}
+.hero-inner{position:relative;z-index:1;color:#fff;padding:0 20px}
+.hero-tag{display:inline-block;border:1px solid rgba(255,180,50,.7);color:#ffb432;font-size:.75rem;letter-spacing:.2em;padding:5px 20px;border-radius:20px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.4rem,8vw,4.5rem);font-weight:900;letter-spacing:.1em;line-height:1.1;margin-bottom:14px;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.hero-sub{font-size:clamp(.9rem,2.5vw,1.15rem);color:#ddd;letter-spacing:.1em;margin-bottom:30px;line-height:1.8}
+.hero-badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.badge{background:rgba(255,180,50,.15);border:1px solid rgba(255,180,50,.4);color:#ffb432;padding:7px 18px;border-radius:20px;font-size:.82rem}
+.hero-tel{display:inline-flex;align-items:center;gap:8px;background:#c8400a;color:#fff;padding:14px 36px;border-radius:40px;font-size:1.1rem;font-weight:700;box-shadow:0 4px 20px rgba(200,64,10,.5)}
+
+/* ─── SECTIONS ─── */
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+.sec-label{font-size:.72rem;letter-spacing:.22em;color:#c8a040;margin-bottom:8px}
+.sec-ttl{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;margin-bottom:36px}
+
+/* ─── FEATURES ─── */
+.features{background:#fff8f0;padding:70px 0}
+.features .sec-ttl{color:#2d1200}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.feat-card{background:#fff;border-radius:14px;padding:32px 24px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.07)}
+.feat-icon{font-size:2.4rem;margin-bottom:16px}
+.feat-card h3{font-size:1.1rem;color:#2d1200;margin-bottom:12px;font-weight:800}
+.feat-card p{font-size:.85rem;color:#777;line-height:1.8}
+.feat-accent{color:#c8400a;font-weight:700}
+
+/* ─── MENU ─── */
+.menu-sec{background:#2d1200;padding:70px 0;color:#fff}
+.menu-sec .sec-ttl{color:#fff}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.menu-col h3{font-size:1rem;color:#ffb432;font-weight:700;margin-bottom:18px;padding-bottom:8px;border-bottom:1px solid rgba(255,180,50,.2)}
+.menu-item{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.9rem}
+.menu-item .name{color:#eee}
+.menu-item .name small{display:block;color:#999;font-size:.76rem;margin-top:2px}
+.menu-item .price{color:#ffb432;font-weight:700;white-space:nowrap}
+.course-box{background:rgba(255,180,50,.08);border:1px solid rgba(255,180,50,.25);border-radius:12px;padding:24px;margin-top:32px}
+.course-box h3{color:#ffb432;font-size:1.1rem;margin-bottom:8px}
+.course-box p{color:#ccc;font-size:.88rem;line-height:1.8}
+.course-box .price-big{font-size:1.8rem;font-weight:800;color:#ffb432;margin-top:10px}
+.menu-note{color:#777;font-size:.78rem;margin-top:18px;text-align:center}
+
+/* ─── GALLERY ─── */
+.gallery-sec{background:#1a1008;padding:70px 0}
+.gallery-sec .sec-ttl,.gallery-sec .sec-label{color:#fff}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-radius:12px;overflow:hidden}
+.gallery img{width:100%;height:250px;object-fit:cover;display:block}
+.img-note{color:#555;font-size:.7rem;margin-top:8px;text-align:right}
+
+/* ─── REVIEWS ─── */
+.rev-sec{background:#fff8f0;padding:70px 0}
+.rev-sec .sec-ttl{color:#2d1200}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.rev-card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 14px rgba(0,0,0,.07)}
+.rev-stars{color:#f5a623;margin-bottom:10px}
+.rev-text{color:#555;font-size:.86rem;line-height:1.85;font-style:italic;margin-bottom:12px}
+.rev-author{color:#bbb;font-size:.75rem;text-align:right}
+
+/* ─── HOURS ─── */
+.hours-sec{background:#fff;padding:70px 0}
+.hours-sec .sec-ttl{color:#2d1200}
+table.htbl{width:100%;border-collapse:collapse;font-size:.9rem;max-width:480px}
+table.htbl th,table.htbl td{padding:10px 14px;border-bottom:1px solid #f0ece5;text-align:left}
+table.htbl th{color:#999;font-weight:500;width:90px}
+table.htbl td{color:#333;font-weight:600}
+.closed{color:#e74c3c!important}
+.fri-sat{color:#c8400a;font-weight:700}
+.hours-note{font-size:.8rem;color:#999;margin-top:14px}
+
+/* ─── ACCESS ─── */
+.access-sec{background:#2d1200;padding:70px 0;color:#fff}
+.access-sec .sec-ttl{color:#fff}
+.access-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+dl.access-dl{display:grid;grid-template-columns:80px 1fr;gap:10px 16px;font-size:.9rem}
+dl.access-dl dt{color:#ffb432;font-weight:700}
+dl.access-dl dd{color:#ddd}
+.map-frame iframe{width:100%;height:250px;border:0;border-radius:10px}
+
+/* ─── CTA ─── */
+.cta{background:linear-gradient(135deg,#c8400a,#e85e20);color:#fff;text-align:center;padding:64px 20px}
+.cta h2{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:12px}
+.cta p{opacity:.88;margin-bottom:28px}
+.cta-tel{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#c8400a;padding:16px 44px;border-radius:40px;font-size:1.3rem;font-weight:800;box-shadow:0 6px 24px rgba(0,0,0,.2)}
+
+footer{background:#100800;color:#555;text-align:center;padding:28px 20px;font-size:.8rem}
+
+@media(max-width:680px){
+  .feat-grid,.menu-cols,.access-inner{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery img{height:160px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">糸島市前原中央 ／ 居酒屋</div>
+    <h1>らしく</h1>
+    <p class="hero-sub">焼き鳥 × 串揚げ × 手作りおでん<br>同級生3人が作る、糸島の王道居酒屋</p>
+    <div class="hero-badges">
+      <span class="badge">糸島どり使用</span>
+      <span class="badge">手作りおでん 通年提供</span>
+      <span class="badge">コース 3,500円〜</span>
+    </div>
+    <a href="tel:0923322559" class="hero-tel">📞 092-332-2559</a>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="wrap">
+    <p class="sec-label">Our Pride</p>
+    <h2 class="sec-ttl">3つのこだわり</h2>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon">🍢</div>
+        <h3>焼き鳥</h3>
+        <p><span class="feat-accent">糸島どり・博多夢豚</span>を使用。オリジナルブレンドの塩と自家製タレで素材の旨味を引き出します。職人が目の前で一本一本丁寧に焼き上げます。</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🍤</div>
+        <h3>串揚げ</h3>
+        <p>生パン粉と<span class="feat-accent">こめ油</span>を使用。胃に優しく、重くならないサクサクの串揚げ。揚げたてアツアツをそのままお楽しみください。</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🍲</div>
+        <h3>手作りおでん</h3>
+        <p>練り物まで<span class="feat-accent">すべて手作り</span>。オーナーの前店舗から続く看板メニューで、冷たいビールのおつまみにも、〆にも大人気。<span class="feat-accent">通年提供</span>しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-sec">
+  <div class="wrap">
+    <p class="sec-label">Menu</p>
+    <h2 class="sec-ttl">メニュー</h2>
+    <div class="menu-cols">
+      <div>
+        <h3>🔥 焼き鳥・串揚げ</h3>
+        <div class="menu-item"><span class="name">ねぎま（糸島どり）</span><span class="price">各種</span></div>
+        <div class="menu-item"><span class="name">もも（糸島どり）</span><span class="price">各種</span></div>
+        <div class="menu-item"><span class="name">豚バラ（博多夢豚）</span><span class="price">各種</span></div>
+        <div class="menu-item"><span class="name">肝（鶏レバー）<small>希少部位も入荷次第提供</small></span><span class="price">各種</span></div>
+        <div class="menu-item"><span class="name">串揚げ盛り合わせ</span><span class="price">各種</span></div>
+        <div class="menu-item"><span class="name">カルパッチョ<small>旬の魚介使用</small></span><span class="price">各種</span></div>
+      </div>
+      <div>
+        <h3>🍲 おでん・一品料理</h3>
+        <div class="menu-item"><span class="name">おでん 各種<small>手作り練り物使用・通年提供</small></span><span class="price">各種</span></div>
+        <div class="menu-item"><span class="name">里芋の唐揚げ<small>アツアツ、火傷注意！</small></span><span class="price">各種</span></div>
+        <div class="menu-item"><span class="name">鯛と鶏のラーメン<small>〆の一品</small></span><span class="price">各種</span></div>
+        <div class="menu-item"><span class="name">生ビール</span><span class="price">各種</span></div>
+        <div class="menu-item"><span class="name">焼酎（ボトルキープ可）</span><span class="price">各種</span></div>
+        <div class="menu-item"><span class="name">サワー各種</span><span class="price">各種</span></div>
+      </div>
+    </div>
+
+    <div class="course-box">
+      <h3>🎉 宴会コース</h3>
+      <p>焼き鳥・串揚げ・カルパッチョなど全7品＋デザート付き。<br>グループでのご利用、同窓会・歓送迎会などにおすすめです。<br>詳細・予約はお電話でお問い合わせください。</p>
+      <div class="price-big">3,500円〜<span style="font-size:1rem;font-weight:400;color:#ccc"> /お一人様（税込）</span></div>
+    </div>
+    <p class="menu-note">※ 価格はお電話にてご確認ください。仕入れにより内容が変わる場合があります。</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <div class="wrap">
+    <p class="sec-label">Gallery</p>
+    <h2 class="sec-ttl">お店の雰囲気</h2>
+    <div class="gallery">
+      <img src="photos/ChIJjSZpHlmTQTUR_Lj5QAjChSw_0.jpg" alt="居酒屋らしく 料理" loading="lazy">
+      <img src="photos/ChIJjSZpHlmTQTUR_Lj5QAjChSw_1.jpg" alt="居酒屋らしく 店内" loading="lazy">
+      <img src="photos/ChIJjSZpHlmTQTUR_Lj5QAjChSw_2.jpg" alt="居酒屋らしく" loading="lazy">
+    </div>
+    <p class="img-note">※ 写真提供：Google マップ</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="rev-sec">
+  <div class="wrap">
+    <p class="sec-label">Voice</p>
+    <h2 class="sec-ttl">お客様の声</h2>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">「焼き鳥は種類少なめですが、焼き加減・塩加減が大好き。串揚げは揚げたてアツアツ、里芋の唐揚げは火傷しそう。おでんもめっちゃ旨し！店員さんの対応も気持ちよく、居心地抜群。」</p>
+        <p class="rev-author">— 古川真司さん（Google）</p>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★☆</div>
+        <p class="rev-text">「このお店の特徴は、ズバリ！メニューが豊富です！焼き鳥と串揚げとおでんを中心に、様々な1品料理が楽しめます。2人で5000円ちょっとでお腹いっぱい楽しめました。」</p>
+        <p class="rev-author">— 勝手にミシュランガイドさん（Google）</p>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★☆</div>
+        <p class="rev-text">「いつも混んでて飛び込みだと先ず入れない人気店。予約して訪店。職人さんが目の前で丁寧に焼いた焼き鳥が大変美味しかったので大満足でした。」</p>
+        <p class="rev-author">— 高宮宏匡さん（Google）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="hours-sec">
+  <div class="wrap">
+    <p class="sec-label">Hours</p>
+    <h2 class="sec-ttl">営業時間</h2>
+    <table class="htbl">
+      <tr><th>月曜日</th><td>17:30〜深夜1:00</td></tr>
+      <tr><th>火曜日</th><td class="closed">定休日</td></tr>
+      <tr><th>水曜日</th><td>17:30〜深夜1:00</td></tr>
+      <tr><th>木曜日</th><td>17:30〜深夜1:00</td></tr>
+      <tr><th>金曜日</th><td class="fri-sat">17:30〜深夜3:00</td></tr>
+      <tr><th>土曜日</th><td class="fri-sat">17:30〜深夜3:00</td></tr>
+      <tr><th>日曜日</th><td>17:30〜深夜1:00</td></tr>
+    </table>
+    <p class="hours-note">※ ご予約はお電話にて承ります。人気店のため週末は予約をおすすめします。<br>駐車場なし。JR筑前前原駅より徒歩約2分。</p>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="access-sec">
+  <div class="wrap">
+    <p class="sec-label" style="color:#c8a040">Access</p>
+    <h2 class="sec-ttl">アクセス</h2>
+    <div class="access-inner">
+      <div>
+        <dl class="access-dl">
+          <dt>住所</dt><dd>福岡県糸島市前原中央2-5-12<br>第3丸一ビル 1F</dd>
+          <dt>電話</dt><dd>092-332-2559</dd>
+          <dt>最寄駅</dt><dd>JR筑前前原駅 徒歩約2分</dd>
+          <dt>駐車場</dt><dd>なし（近隣コインPご利用ください）</dd>
+          <dt>支払い</dt><dd>カード可（JCB・AMEX含む）</dd>
+        </dl>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=居酒屋らしく+糸島市前原中央" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>ご予約・お問い合わせ</h2>
+  <p>週末・宴会は早めのご予約を。まずはお気軽にどうぞ。</p>
+  <a href="tel:0923322559" class="cta-tel">📞 092-332-2559</a>
+</div>
+
+<footer>
+  <p>居酒屋 らしく</p>
+  <p style="margin-top:6px">〒819-1116 福岡県糸島市前原中央2-5-12 第3丸一ビル1F</p>
+  <p style="margin-top:20px;font-size:.7rem;color:#333">このページはホームページ制作の提案サンプルです。</p>
+</footer>
+
+</body>
+</html>

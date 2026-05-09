@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>魚処 亀山｜唐津 創業170年の鮮魚店直営・海鮮丼</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hiragino Sans','Meiryo',sans-serif;color:#222;background:#f4f0eb}
+a{color:inherit;text-decoration:none}
+
+/* HERO */
+.hero{position:relative;height:88vh;min-height:500px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('photos/ChIJRWQ3efx5ajURdC6ZB2cLXzI_0.jpg') center/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,30,60,.55),rgba(0,10,30,.78))}
+.hero-inner{position:relative;z-index:1;color:#fff;padding:0 20px}
+.hero-label{font-size:.72rem;letter-spacing:.25em;color:#7dd4f4;margin-bottom:14px}
+.hero h1{font-size:clamp(2.4rem,7vw,4.5rem);font-weight:900;letter-spacing:.08em;margin-bottom:14px;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.hero-sub{font-size:clamp(.9rem,2.5vw,1.1rem);color:#cde8f5;line-height:1.85;letter-spacing:.05em;margin-bottom:26px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:26px}
+.hbadge{border:1px solid rgba(125,212,244,.5);color:#7dd4f4;padding:6px 16px;border-radius:20px;font-size:.78rem}
+.hero-tel{display:inline-flex;align-items:center;gap:8px;background:#0a5c8a;color:#fff;padding:13px 34px;border-radius:40px;font-size:1.05rem;font-weight:700;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+
+/* SECTIONS */
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.sec-label{font-size:.72rem;letter-spacing:.22em;color:#0a7ab5;margin-bottom:8px}
+.sec-ttl{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;margin-bottom:36px;color:#001830}
+
+/* STORY */
+.story{background:#fff;padding:70px 0}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.story-img img{width:100%;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.img-note{font-size:.7rem;color:#bbb;margin-top:6px;text-align:right}
+.story-text p{font-size:.95rem;color:#555;line-height:1.95;margin-bottom:16px}
+.story-text strong{color:#0a5c8a}
+.story-num{display:flex;gap:32px;margin-top:24px;flex-wrap:wrap}
+.num-item{text-align:center}
+.num-item .num{font-size:2.2rem;font-weight:900;color:#0a5c8a;line-height:1}
+.num-item .label{font-size:.76rem;color:#888;margin-top:4px}
+
+/* MENU */
+.menu-sec{background:#eef6fc;padding:70px 0}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.menu-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.08);text-align:center}
+.menu-card-top{padding:28px 20px 20px;background:linear-gradient(135deg,#0a5c8a,#0a7ab5)}
+.menu-card-top .rank{font-size:.7rem;color:rgba(255,255,255,.7);letter-spacing:.12em;margin-bottom:6px}
+.menu-card-top h3{color:#fff;font-size:1.1rem;font-weight:800}
+.menu-card-body{padding:20px}
+.menu-card-body .price{font-size:2rem;font-weight:900;color:#0a5c8a;margin-bottom:10px;line-height:1}
+.menu-card-body .sub{font-size:.76rem;color:#888;margin-bottom:12px}
+.menu-card-body ul{list-style:none;font-size:.82rem;color:#666;line-height:1.9;text-align:left}
+.menu-card-body ul li::before{content:'・'}
+.popular .menu-card-top{background:linear-gradient(135deg,#c87000,#e8a000)}
+.menu-note{font-size:.8rem;color:#999;text-align:center;margin-top:24px}
+
+/* COMMITMENT */
+.commitment{background:#001830;padding:70px 0;color:#fff}
+.commitment .sec-ttl{color:#fff}
+.commitment .sec-label{color:#7dd4f4}
+.commit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.commit-card{border:1px solid rgba(125,212,244,.2);border-radius:12px;padding:28px 22px}
+.commit-card h3{color:#7dd4f4;font-size:1rem;font-weight:700;margin-bottom:12px}
+.commit-card p{font-size:.86rem;color:#aac;line-height:1.85}
+.commit-accent{color:#f0d080;font-weight:700}
+
+/* GALLERY */
+.gallery-sec{background:#f4f0eb;padding:70px 0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-radius:10px;overflow:hidden}
+.gallery img{width:100%;height:240px;object-fit:cover;display:block}
+
+/* HOURS */
+.hours-sec{background:#fff;padding:70px 0}
+.hours-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+table.htbl{width:100%;max-width:360px;border-collapse:collapse;font-size:.9rem}
+table.htbl th,table.htbl td{padding:10px 14px;border-bottom:1px solid #eef6fc;text-align:left}
+table.htbl th{color:#999;font-weight:500;width:90px}
+table.htbl td{font-weight:600;color:#001830}
+.closed{color:#e74c3c!important}
+.hours-note{font-size:.8rem;color:#999;margin-top:14px;line-height:1.7}
+.access-box dl{display:grid;grid-template-columns:80px 1fr;gap:10px 14px;font-size:.9rem}
+.access-box dt{color:#0a5c8a;font-weight:700}
+.access-box dd{color:#555}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,#0a5c8a,#0a7ab5);color:#fff;text-align:center;padding:64px 20px}
+.cta h2{font-size:clamp(1.4rem,4vw,2rem);margin-bottom:10px}
+.cta p{opacity:.88;margin-bottom:24px;font-size:.93rem}
+.cta-tel{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#0a5c8a;padding:16px 44px;border-radius:40px;font-size:1.25rem;font-weight:800;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+
+footer{background:#000d1a;color:#444;text-align:center;padding:28px 20px;font-size:.78rem}
+
+@media(max-width:680px){
+  .story-grid,.hours-inner{grid-template-columns:1fr}
+  .menu-grid,.commit-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery img{height:160px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-label">KARATSU UODOKORO</div>
+    <h1>魚処 亀山</h1>
+    <p class="hero-sub">創業170年・亀山鮮魚店が直営する海鮮丼専門店<br>唐津漁港水揚げの天然魚をその日のうちに</p>
+    <div class="hero-badges">
+      <span class="hbadge">漁港直送 天然魚</span>
+      <span class="hbadge">創業170年の目利き</span>
+      <span class="hbadge">自家製タレ</span>
+    </div>
+    <a href="tel:0955723568" class="hero-tel">📞 0955-72-3568</a>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story">
+  <div class="wrap">
+    <div class="story-grid">
+      <div>
+        <p class="sec-label">Our Story</p>
+        <h2 class="sec-ttl">170年の目利きが<br>選ぶ、この一杯</h2>
+        <div class="story-text">
+          <p>唐津市中町商店街に店を構える<strong>亀山鮮魚店</strong>は、創業170年を超える老舗鮮魚店です。</p>
+          <p>「自分にも何かできないか」という思いから、2021年に鮮魚店の隣の空き店舗で<strong>海鮮丼専門店「魚処 亀山」</strong>を開業。毎朝、唐津漁港で水揚げされた天然魚を直接仕入れ、その日のうちに丼にのせて提供します。</p>
+          <p>刺身醤油・みりん・お酒をブレンドした<strong>自家製タレ</strong>は、鮮魚店ならではの一品。イサキは一度炙って香ばしさを引き出し、アオリイカは1日寝かせることで甘みを増幅させるなど、素材ごとに仕込みにこだわっています。</p>
+        </div>
+        <div class="story-num">
+          <div class="num-item"><div class="num">170<span style="font-size:1rem">年</span></div><div class="label">創業からの歴史</div></div>
+          <div class="num-item"><div class="num">毎朝</div><div class="label">漁港から直送仕入れ</div></div>
+        </div>
+      </div>
+      <div>
+        <img src="photos/ChIJRWQ3efx5ajURdC6ZB2cLXzI_1.jpg" alt="魚処亀山 海鮮丼">
+        <p class="img-note">※ 写真提供：Google マップ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-sec">
+  <div class="wrap">
+    <p class="sec-label">Menu</p>
+    <h2 class="sec-ttl">海鮮丼メニュー</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <div class="rank">STANDARD</div>
+          <h3>海鮮丼定食（中）</h3>
+        </div>
+        <div class="menu-card-body">
+          <div class="price">1,000<span style="font-size:1rem;font-weight:400">円</span></div>
+          <div class="sub">ご飯・味噌汁・小鉢付き</div>
+          <ul>
+            <li>旬の天然魚を数種盛合せ</li>
+            <li>自家製タレ付き</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-card popular">
+        <div class="menu-card-top">
+          <div class="rank">POPULAR</div>
+          <h3>海鮮丼定食（上）</h3>
+        </div>
+        <div class="menu-card-body">
+          <div class="price">1,300<span style="font-size:1rem;font-weight:400">円</span></div>
+          <div class="sub">ご飯・味噌汁・小鉢付き</div>
+          <ul>
+            <li>イサキ（炙り）</li>
+            <li>アオリイカ（1日寝かせ）</li>
+            <li>甘えび・ネギトロ 他</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <div class="rank">PREMIUM（限定15食）</div>
+          <h3>海鮮丼定食（特上）</h3>
+        </div>
+        <div class="menu-card-body">
+          <div class="price">1,800<span style="font-size:1rem;font-weight:400">円</span></div>
+          <div class="sub">ご飯・味噌汁・小鉢付き・数量限定</div>
+          <ul>
+            <li>生うに・いくら・カニの身</li>
+            <li>その日の最上ネタをふんだんに</li>
+            <li>売切れ次第終了</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="menu-note">※ ネタは仕入れにより変わります。ランチのみの営業です（11:30〜14:30）。</p>
+  </div>
+</section>
+
+<!-- COMMITMENT -->
+<section class="commitment">
+  <div class="wrap">
+    <p class="sec-label">Commitment</p>
+    <h2 class="sec-ttl">鮮魚店直営ならではの<br>3つのこだわり</h2>
+    <div class="commit-grid">
+      <div class="commit-card">
+        <h3>🐟 漁港直送・天然魚</h3>
+        <p>毎朝、<span class="commit-accent">唐津漁港</span>で水揚げされたばかりの天然魚を直接仕入れ。玄界灘の豊かな海が育んだ鮮度抜群の魚介をその日のうちに提供します。</p>
+      </div>
+      <div class="commit-card">
+        <h3>🔪 素材ごとの仕込み</h3>
+        <p>イサキは炙って<span class="commit-accent">香ばしさを引き出し</span>、アオリイカは1日寝かせることで<span class="commit-accent">甘みを増幅</span>。素材に合わせた丁寧な仕込みで旨味を最大化します。</p>
+      </div>
+      <div class="commit-card">
+        <h3>🍶 自家製タレ</h3>
+        <p>刺身醤油・みりん・お酒を独自の割合でブレンドした<span class="commit-accent">自家製タレ</span>。170年の鮮魚店が試行錯誤を重ねた、海鮮丼のためだけのタレです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <div class="wrap">
+    <p class="sec-label">Gallery</p>
+    <h2 class="sec-ttl">お店の様子</h2>
+    <div class="gallery">
+      <img src="photos/ChIJRWQ3efx5ajURdC6ZB2cLXzI_0.jpg" alt="魚処亀山" loading="lazy">
+      <img src="photos/ChIJRWQ3efx5ajURdC6ZB2cLXzI_1.jpg" alt="魚処亀山 海鮮丼" loading="lazy">
+      <img src="photos/ChIJRWQ3efx5ajURdC6ZB2cLXzI_2.jpg" alt="魚処亀山 食材" loading="lazy">
+    </div>
+    <p style="font-size:.7rem;color:#bbb;text-align:right;margin-top:8px">※ 写真提供：Google マップ</p>
+  </div>
+</section>
+
+<!-- HOURS & ACCESS -->
+<section class="hours-sec">
+  <div class="wrap">
+    <p class="sec-label">Hours & Access</p>
+    <h2 class="sec-ttl">営業時間・アクセス</h2>
+    <div class="hours-inner">
+      <div>
+        <h3 style="font-size:1rem;color:#0a5c8a;margin-bottom:14px;font-weight:700">営業時間</h3>
+        <table class="htbl">
+          <tr><th>月曜日</th><td>11:30〜14:30</td></tr>
+          <tr><th>火曜日</th><td>11:30〜14:30</td></tr>
+          <tr><th>水曜日</th><td class="closed">定休日</td></tr>
+          <tr><th>木曜日</th><td>11:30〜14:30</td></tr>
+          <tr><th>金曜日</th><td>11:30〜14:30</td></tr>
+          <tr><th>土曜日</th><td>11:30〜14:30</td></tr>
+          <tr><th>日曜日</th><td>11:30〜14:30</td></tr>
+        </table>
+        <p class="hours-note">ランチのみの営業です（14:30 L.O.）。<br>特上（限定15食）は早めのご来店をおすすめします。</p>
+      </div>
+      <div class="access-box">
+        <h3 style="font-size:1rem;color:#0a5c8a;margin-bottom:14px;font-weight:700">アクセス</h3>
+        <dl>
+          <dt>住所</dt><dd>佐賀県唐津市中町1875-1</dd>
+          <dt>電話</dt><dd>0955-72-3568</dd>
+          <dt>最寄駅</dt><dd>JR唐津駅 徒歩約5分</dd>
+          <dt>場所</dt><dd>中町商店街 亀山鮮魚店の隣</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>ご来店・お問い合わせ</h2>
+  <p>特上（限定15食）は早めのご来店がおすすめ。ランチのみ営業しています。</p>
+  <a href="tel:0955723568" class="cta-tel">📞 0955-72-3568</a>
+</div>
+
+<footer>
+  <p>魚処 亀山</p>
+  <p style="margin-top:6px">〒847-0013 佐賀県唐津市中町1875-1</p>
+  <p style="margin-top:20px;font-size:.68rem;color:#333">このページはホームページ制作の提案サンプルです。</p>
+</footer>
+
+</body>
+</html>

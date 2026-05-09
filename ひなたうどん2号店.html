@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ひなたうどん 2号店｜糸島・前原のうどん＆居酒屋</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hiragino Sans','Meiryo',sans-serif;color:#333;background:#faf8f4}
+a{color:inherit;text-decoration:none}
+
+/* ─── HERO ─── */
+.hero{position:relative;height:90vh;min-height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero-img{position:absolute;inset:0;background:url('photos/ChIJ-7cuY8bpQTURyd4O1dQodCk_0.jpg') center/cover no-repeat}
+.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.45) 0%,rgba(0,0,0,.6) 100%)}
+.hero-content{position:relative;z-index:1;color:#fff;padding:0 20px}
+.hero-tag{display:inline-block;background:rgba(210,150,50,.85);color:#fff;font-size:.78rem;letter-spacing:.12em;padding:5px 18px;border-radius:20px;margin-bottom:18px}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800;letter-spacing:.05em;line-height:1.2;margin-bottom:14px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.hero-sub{font-size:clamp(.95rem,2.5vw,1.2rem);opacity:.9;letter-spacing:.06em;margin-bottom:28px}
+.hero-modes{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.mode-badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.5);color:#fff;padding:8px 22px;border-radius:30px;font-size:.88rem;backdrop-filter:blur(6px)}
+.hero-tel{margin-top:22px;display:inline-flex;align-items:center;gap:8px;background:#d4700a;color:#fff;padding:12px 32px;border-radius:40px;font-size:1.1rem;font-weight:700;box-shadow:0 4px 18px rgba(0,0,0,.3)}
+
+/* ─── SECTIONS ─── */
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+section{padding:70px 0}
+
+.sec-label{font-size:.75rem;letter-spacing:.2em;color:#c8860a;text-transform:uppercase;margin-bottom:10px}
+.sec-ttl{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;margin-bottom:36px;color:#2d1a00}
+
+/* ─── ABOUT ─── */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-img img{width:100%;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.12)}
+.about-text p{line-height:1.9;font-size:.95rem;color:#555;margin-bottom:16px}
+.about-text strong{color:#c8860a}
+.img-note{font-size:.7rem;color:#bbb;margin-top:6px;text-align:right}
+
+/* ─── MENU ─── */
+.menu-section{background:#fdf6ec}
+.menu-tabs{display:flex;gap:0;border-radius:12px;overflow:hidden;margin-bottom:40px;border:2px solid #d4700a}
+.tab-btn{flex:1;padding:14px;text-align:center;background:#fff;color:#888;font-size:.9rem;font-weight:700;cursor:pointer;border:none;transition:.2s}
+.tab-btn.active,.tab-btn:hover{background:#d4700a;color:#fff}
+.menu-block{display:none}
+.menu-block.show{display:block}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.menu-card{background:#fff;border-radius:10px;padding:20px 22px;box-shadow:0 2px 10px rgba(0,0,0,.07);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.menu-card .dish{font-weight:700;font-size:.97rem;color:#2d1a00}
+.menu-card .dish small{display:block;font-size:.78rem;color:#888;font-weight:400;margin-top:3px}
+.menu-card .price{font-size:1.05rem;font-weight:800;color:#d4700a;white-space:nowrap}
+.menu-note{font-size:.8rem;color:#999;margin-top:20px;text-align:center}
+.popular-badge{background:#d4700a;color:#fff;font-size:.65rem;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle}
+
+/* ─── GALLERY ─── */
+.gallery-section{background:#fff}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-radius:12px;overflow:hidden}
+.gallery img{width:100%;height:240px;object-fit:cover;display:block}
+
+/* ─── REVIEWS ─── */
+.reviews-section{background:#fdf6ec}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.rev-card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 14px rgba(0,0,0,.07)}
+.rev-stars{color:#f5a623;font-size:1rem;margin-bottom:10px}
+.rev-text{color:#555;font-size:.87rem;line-height:1.85;font-style:italic;margin-bottom:12px}
+.rev-author{color:#bbb;font-size:.76rem;text-align:right}
+
+/* ─── HOURS ─── */
+.hours-section{background:#fff}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.hours-box h3{font-size:1rem;font-weight:700;color:#c8860a;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.hours-box h3::before{content:'';display:inline-block;width:4px;height:1em;background:#c8860a;border-radius:2px}
+table.htbl{width:100%;border-collapse:collapse;font-size:.9rem}
+table.htbl th,table.htbl td{padding:9px 12px;border-bottom:1px solid #f0ece5;text-align:left}
+table.htbl th{color:#888;font-weight:500;width:90px}
+table.htbl td{color:#333;font-weight:600}
+.closed{color:#e74c3c!important}
+
+/* ─── ACCESS ─── */
+.access-section{background:#2d1a00;color:#fff}
+.access-section .sec-ttl{color:#fff}
+.access-info{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.access-detail dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.9rem}
+.access-detail dt{color:#c8860a;font-weight:700}
+.access-detail dd{color:#ddd}
+.map-frame{border-radius:10px;overflow:hidden}
+.map-frame iframe{width:100%;height:250px;border:0}
+
+/* ─── CTA ─── */
+.cta{background:linear-gradient(135deg,#d4700a,#f09020);color:#fff;text-align:center;padding:60px 20px}
+.cta h2{font-size:clamp(1.4rem,4vw,2rem);margin-bottom:12px}
+.cta p{opacity:.9;margin-bottom:28px;font-size:.95rem}
+.cta-tel{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#d4700a;padding:16px 42px;border-radius:40px;font-size:1.3rem;font-weight:800;box-shadow:0 6px 24px rgba(0,0,0,.2)}
+
+/* ─── FOOTER ─── */
+footer{background:#1a0f00;color:#888;text-align:center;padding:28px 20px;font-size:.8rem}
+
+@media(max-width:680px){
+  .about-grid,.hours-grid,.access-info{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery img{height:160px}
+  .menu-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-tag">糸島市前原 ／ うどん＆居酒屋</div>
+    <h1>ひなたうどん<br>2号店</h1>
+    <p class="hero-sub">昼はこだわりうどん、夜は地元の居酒屋へ</p>
+    <div class="hero-modes">
+      <span class="mode-badge">🍜 ランチ 11:00〜14:30</span>
+      <span class="mode-badge">🍶 ディナー 18:00〜深夜</span>
+    </div>
+    <a href="tel:0923212230" class="hero-tel">📞 092-321-2230</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="photos/ChIJ-7cuY8bpQTURyd4O1dQodCk_1.jpg" alt="ひなたうどん2号店 店内">
+        <p class="img-note">※ 写真提供：Google マップ</p>
+      </div>
+      <div class="about-text">
+        <p class="sec-label">About</p>
+        <h2 class="sec-ttl">二つの顔を持つ<br>糸島の食堂</h2>
+        <p>JR筑前前原駅から徒歩5分。<strong>昼はうどん屋、夜は居酒屋</strong>という2つの顔を持つ、地元民に愛される食堂です。</p>
+        <p>糸島産の新鮮な野菜を使った天ぷらをたっぷりトッピングした<strong>名物野菜天うどん</strong>は、ランチタイムに長年愛されてきた看板メニュー。夜は地鶏タタキ・溶岩ステーキ・刺身など本格的な一品料理がズラリ揃い、地元の宴席に欠かせない存在です。</p>
+        <p>おもしろい大将が切り盛りする、賑やかでアットホームな一軒。木曜はランチのみの営業です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section">
+  <div class="wrap">
+    <p class="sec-label">Menu</p>
+    <h2 class="sec-ttl">メニュー</h2>
+    <div class="menu-tabs">
+      <button class="tab-btn active" onclick="showMenu('lunch')">🍜 ランチ（うどん）</button>
+      <button class="tab-btn" onclick="showMenu('dinner')">🍶 ディナー（居酒屋）</button>
+    </div>
+
+    <div id="lunch" class="menu-block show">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="dish">肉野菜天うどん<span class="popular-badge">人気No.1</span><small>糸島野菜の天ぷらたっぷり</small></div>
+          <div class="price">750円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">ちょろちょろうどん<small>野菜天・わかめ・キムチ・きつね・肉</small></div>
+          <div class="price">880円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">本気のカツ丼＋うどんセット<span class="popular-badge">10食限定</span></div>
+          <div class="price">980円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">ふさふさうどん<small>特製トッピング盛り</small></div>
+          <div class="price">620円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">きつねうどん</div>
+          <div class="price">620円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">いも天うどん</div>
+          <div class="price">600円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">野菜天うどん<small>ゴーヤ・大葉・ニンジン等</small></div>
+          <div class="price">600円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">かけうどん<small>シンプルに出汁を味わう</small></div>
+          <div class="price">440円</div>
+        </div>
+      </div>
+      <p class="menu-note">※ 天ぷら具材は仕入れにより変わります。価格は税込表示です。</p>
+    </div>
+
+    <div id="dinner" class="menu-block">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="dish">地鶏のタタキ<small>新鮮な地鶏をオニオンスライスとともに</small></div>
+          <div class="price">880円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">溶岩ステーキ<small>一度は食べる価値あり</small></div>
+          <div class="price">時価</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">刺身盛合せ<small>仕入れ当日の鮮魚を使用</small></div>
+          <div class="price">時価</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">天ぷら盛合せ<small>夜でも天ぷらお楽しみいただけます</small></div>
+          <div class="price">時価</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">自家製セロリの浅漬け<small>さっぱりとしたおつまみ</small></div>
+          <div class="price">400円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">究極の焼きおにぎり<small>〆の一品</small></div>
+          <div class="price">200円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">ハイボール</div>
+          <div class="price">550円</div>
+        </div>
+        <div class="menu-card">
+          <div class="dish">芋焼酎（水割り・ロック）</div>
+          <div class="price">500円〜</div>
+        </div>
+      </div>
+      <p class="menu-note">※ ディナーメニューは仕入れ状況により変更する場合があります。詳細はお電話でご確認ください。</p>
+    </div>
+  </div>
+</section>
+
+<script>
+function showMenu(tab) {
+  document.querySelectorAll('.menu-block').forEach(b => b.classList.remove('show'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(tab).classList.add('show');
+  event.target.classList.add('active');
+}
+</script>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="wrap">
+    <p class="sec-label">Gallery</p>
+    <h2 class="sec-ttl">お店の様子</h2>
+    <div class="gallery">
+      <img src="photos/ChIJ-7cuY8bpQTURyd4O1dQodCk_0.jpg" alt="ひなたうどん2号店" loading="lazy">
+      <img src="photos/ChIJ-7cuY8bpQTURyd4O1dQodCk_1.jpg" alt="ひなたうどん2号店 料理" loading="lazy">
+      <img src="photos/ChIJ-7cuY8bpQTURyd4O1dQodCk_2.jpg" alt="ひなたうどん2号店 店内" loading="lazy">
+    </div>
+    <p class="img-note" style="text-align:right;margin-top:8px">※ 写真提供：Google マップ</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <div class="wrap">
+    <p class="sec-label">Voice</p>
+    <h2 class="sec-ttl">お客様の声</h2>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">「18時からは居酒屋メニューが追加になり、美味しい刺身や天ぷらが頂けます。溶岩ステーキはお値段はしますが一度は食べてみる価値ありです。」</p>
+        <p class="rev-author">— 友見さん（Google）</p>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★☆</div>
+        <p class="rev-text">「夜の22:00頃ですが、落ち着いた雰囲気で、好きです。タマネギサラダ、肉ご飯（小）、肉うどん大盛り。夜遅くまで営業しているので、有り難いです。」</p>
+        <p class="rev-author">— ヒロさん（Google）</p>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★☆</div>
+        <p class="rev-text">「スタミナぶっかけうどん（冷）とカツ丼・うどんセットを注文。具だくさんのぶっかけは、ハズさない一品。スタッフの方がとても感じが良かった！」</p>
+        <p class="rev-author">— noli salvadorさん（Google）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="hours-section">
+  <div class="wrap">
+    <p class="sec-label">Hours</p>
+    <h2 class="sec-ttl">営業時間</h2>
+    <div class="hours-grid">
+      <div class="hours-box">
+        <h3>🍜 ランチ（うどん）</h3>
+        <table class="htbl">
+          <tr><th>月〜水</th><td>11:00〜14:30</td></tr>
+          <tr><th>木曜日</th><td>11:00〜14:30</td></tr>
+          <tr><th>金曜日</th><td>11:00〜14:30</td></tr>
+          <tr><th>土曜日</th><td>11:00〜14:30</td></tr>
+          <tr><th>日曜日</th><td>11:00〜14:30</td></tr>
+        </table>
+      </div>
+      <div class="hours-box">
+        <h3>🍶 ディナー（居酒屋）</h3>
+        <table class="htbl">
+          <tr><th>月曜日</th><td>18:00〜深夜0:00</td></tr>
+          <tr><th>火曜日</th><td>18:00〜深夜0:00</td></tr>
+          <tr><th>水曜日</th><td>18:00〜深夜0:00</td></tr>
+          <tr><th>木曜日</th><td class="closed">ディナー休み</td></tr>
+          <tr><th>金曜日</th><td>18:00〜深夜0:00</td></tr>
+          <tr><th>土曜日</th><td>18:00〜深夜0:00</td></tr>
+          <tr><th>日曜日</th><td>18:00〜深夜0:00</td></tr>
+        </table>
+      </div>
+    </div>
+    <p style="font-size:.82rem;color:#999;margin-top:20px">※ 駐車場3台あり（店舗前）。全席禁煙。お子様連れ不可。</p>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="access-section">
+  <div class="wrap">
+    <p class="sec-label" style="color:#c8860a">Access</p>
+    <h2 class="sec-ttl">アクセス</h2>
+    <div class="access-info">
+      <div class="access-detail">
+        <dl>
+          <dt>住所</dt><dd>福岡県糸島市前原中央2-3-31</dd>
+          <dt>電話</dt><dd>092-321-2230</dd>
+          <dt>最寄駅</dt><dd>JR筑前前原駅 徒歩5分</dd>
+          <dt>駐車場</dt><dd>3台（店舗前）</dd>
+          <dt>支払い</dt><dd>現金・PayPay・カード可</dd>
+        </dl>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=ひなたうどん2号店+糸島市" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>ご予約・お問い合わせ</h2>
+  <p>夜のご宴会は事前のご予約がおすすめです</p>
+  <a href="tel:0923212230" class="cta-tel">📞 092-321-2230</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>ひなたうどん 2号店</p>
+  <p style="margin-top:6px">〒819-1116 福岡県糸島市前原中央2-3-31</p>
+  <p style="margin-top:20px;font-size:.7rem;color:#555">このページはホームページ制作の提案サンプルです。</p>
+</footer>
+
+</body>
+</html>
