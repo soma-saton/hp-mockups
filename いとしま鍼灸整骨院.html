@@ -9,7 +9,7 @@ header{position:fixed;top:0;width:100%;background:#0d2137f5;backdrop-filter:blur
 .logo{font-family:'Noto Serif JP',serif;color:#fff;font-size:1rem}
 nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.78rem;margin-left:16px}
 @media(max-width:580px){nav{display:none}}
-.hero{min-height:90vh;background:linear-gradient(rgba(13,33,55,0.74),rgba(13,33,55,0.74)),url(https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80) center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
+.hero{min-height:90vh;background:linear-gradient(rgba(13,33,55,0.74),rgba(13,33,55,0.74)),url(photos/ChIJXTSkmKfpQTURgPZDfYT4ajo_0.jpg) center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:56px;background:#e8f5fd;clip-path:ellipse(60% 100% at 50% 100%)}
 .hero-inner{position:relative;z-index:1;max-width:620px}
 .hi{font-size:5rem;display:block;margin-bottom:18px}
@@ -47,6 +47,12 @@ table.tbl th{text-align:left;padding:11px 0;color:#999;font-size:.78rem;font-wei
 table.tbl td{padding:11px 0;font-size:.86rem;line-height:1.7}
 .map-box{background:linear-gradient(135deg,#0d213722,#2779a733);border-radius:8px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0d2137;gap:6px}
 .map-box .mi{font-size:2rem}.map-box p{font-size:.82rem}
+
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:32px}
+.rev-card{background:#fff;padding:22px 24px;border-radius:10px;box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.rev-stars{color:#f5a623;margin-bottom:10px;font-size:.95rem}
+.rev-text{color:#444;font-size:.87rem;line-height:1.85;margin-bottom:12px;font-style:italic}
+.rev-author{color:#aaa;font-size:.78rem;text-align:right}
 footer{background:#0d2137;color:rgba(255,255,255,.4);padding:24px;text-align:center;font-size:.76rem}
 footer strong{color:rgba(255,255,255,.7)}
 </style></head><body>
@@ -72,8 +78,20 @@ footer strong{color:rgba(255,255,255,.7)}
 
 <section id="gallery-sec"><div class="wrap">
 <p class="label">Gallery</p><h2 class="ttl">サービスの様子</h2>
-<div class="gallery"><div class="gi"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&h=400&q=80" alt="いとしま鍼灸整骨院" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=600&h=400&q=80" alt="いとしま鍼灸整骨院" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&h=400&q=80" alt="いとしま鍼灸整骨院" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 掲載画像はイメージです</p>
+<div class="gallery"><div class="gi"><img src="photos/ChIJXTSkmKfpQTURgPZDfYT4ajo_0.jpg" alt="いとしま鍼灸整骨院" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="photos/ChIJXTSkmKfpQTURgPZDfYT4ajo_1.jpg" alt="いとしま鍼灸整骨院" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="photos/ChIJXTSkmKfpQTURgPZDfYT4ajo_2.jpg" alt="いとしま鍼灸整骨院" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 写真提供：Google マップ</p>
 </div></section>
+
+<section id="reviews"><div class="wrap"><p class="label">Voice</p><h2 class="ttl" style="color:#0d2137">お客様の声</h2><div class="rev-grid"><div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">「本当におすすめです！！
+先生やスタッフの方がとても親切で、院内の雰囲気も明るく居心地がいいです。
+なにより院長先生が治すことを諦めない！
+毎回丁寧に話を聞いてくれるので安心して通えています。
+周りで整骨院迷子の人が居たら一番に紹介しています
+それくらい自信を持っておすすめできる整骨院です。
+先生たちみんないけめん…」</p><p class="rev-author">— MNDさん</p></div><div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">「いとしま鍼灸整骨院で呼吸がしにくく痛みがあって症状をみてもらいました。
+痛みがとれて、スムーズに呼吸が出来るようになりました😆
+気軽に相談が出来る頼もしい若いハンサムな先生がいらっしゃいますよ!😊」</p><p class="rev-author">— クーちゃんさん</p></div><div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">「朝起きると首の痛みが激しく、左を向けない状態が3日間続いてました。院長先生に施術してもらい、一発で治り大変感動しました！原因や予防方法なども丁寧に教えて頂きました。
+
+健康寿命を伸ばすコースがあるとのことなので、次回からチャレンジしていこうと思います。」</p><p class="rev-author">— 大場啓嗣さん</p></div></div></div></section>
 
 <section class="flow" id="flow"><div class="wrap">
 <p class="label">Flow</p><h2 class="ttl">ご利用の流れ</h2>
@@ -88,7 +106,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <h2>まずはお気軽にご連絡ください</h2>
 <p>ご質問・ご予約はお電話にて承っています。</p>
 <div class="cta-phone">092-332-9747</div>
-<div class="cta-hours">受付時間：9:00〜13:00 / 15:00〜19:30</div>
+<div class="cta-hours">受付時間：9時00分～21時00分</div>
 <a href="tel:092-332-9747" class="btn-y">今すぐ電話する</a>
 </div>
 
@@ -99,7 +117,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <tr><th>店舗名</th><td>いとしま鍼灸整骨院</td></tr>
 <tr><th>住所</th><td>〒819-1117 福岡県糸島市前原西２丁目１５−５</td></tr>
 <tr><th>電話</th><td><a href="tel:092-332-9747" style="color:inherit">092-332-9747</a></td></tr>
-<tr><th>平日</th><td>9:00〜13:00 / 15:00〜19:30</td></tr><tr><th>土日祝</th><td>9:00〜13:00</td></tr><tr><th>定休日</th><td style="color:#e74c3c;font-weight:600">日曜・祝日</td></tr>
+<tr><th>月〜日</th><td>9時00分～21時00分</td></tr>
 </table></div>
 <div><iframe src="https://maps.google.com/maps?q=%E3%80%92819-1117%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%B3%B8%E5%B3%B6%E5%B8%82%E5%89%8D%E5%8E%9F%E8%A5%BF%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%95%E2%88%92%EF%BC%95&output=embed&hl=ja&z=16" width="100%" height="380" style="border:0;border-radius:8px;display:block" allowfullscreen loading="lazy"></iframe></div>
 </div></div></section>

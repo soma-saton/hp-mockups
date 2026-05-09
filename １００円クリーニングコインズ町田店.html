@@ -9,7 +9,7 @@ header{position:fixed;top:0;width:100%;background:#0a2540f5;backdrop-filter:blur
 .logo{font-family:'Noto Serif JP',serif;color:#fff;font-size:1rem}
 nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.78rem;margin-left:16px}
 @media(max-width:580px){nav{display:none}}
-.hero{min-height:90vh;background:linear-gradient(rgba(10,37,64,0.74),rgba(10,37,64,0.74)),url(https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1400&q=80) center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
+.hero{min-height:90vh;background:linear-gradient(rgba(10,37,64,0.74),rgba(10,37,64,0.74)),url(photos/ChIJu8LR-Yh4ajURzQr_s9_E7UE_0.jpg) center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:56px;background:#ebf5fb;clip-path:ellipse(60% 100% at 50% 100%)}
 .hero-inner{position:relative;z-index:1;max-width:620px}
 .hi{font-size:5rem;display:block;margin-bottom:18px}
@@ -47,6 +47,12 @@ table.tbl th{text-align:left;padding:11px 0;color:#999;font-size:.78rem;font-wei
 table.tbl td{padding:11px 0;font-size:.86rem;line-height:1.7}
 .map-box{background:linear-gradient(135deg,#0a254022,#1b6ca833);border-radius:8px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0a2540;gap:6px}
 .map-box .mi{font-size:2rem}.map-box p{font-size:.82rem}
+
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:32px}
+.rev-card{background:#fff;padding:22px 24px;border-radius:10px;box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.rev-stars{color:#f5a623;margin-bottom:10px;font-size:.95rem}
+.rev-text{color:#444;font-size:.87rem;line-height:1.85;margin-bottom:12px;font-style:italic}
+.rev-author{color:#aaa;font-size:.78rem;text-align:right}
 footer{background:#0a2540;color:rgba(255,255,255,.4);padding:24px;text-align:center;font-size:.76rem}
 footer strong{color:rgba(255,255,255,.7)}
 </style></head><body>
@@ -72,8 +78,10 @@ footer strong{color:rgba(255,255,255,.7)}
 
 <section id="gallery-sec"><div class="wrap">
 <p class="label">Gallery</p><h2 class="ttl">サービスの様子</h2>
-<div class="gallery"><div class="gi"><img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=600&h=400&q=80" alt="１００円クリーニングコインズ町田店" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&h=400&q=80" alt="１００円クリーニングコインズ町田店" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1582721478779-0ae163c05a60?auto=format&fit=crop&w=600&h=400&q=80" alt="１００円クリーニングコインズ町田店" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 掲載画像はイメージです</p>
+<div class="gallery"><div class="gi"><img src="photos/ChIJu8LR-Yh4ajURzQr_s9_E7UE_0.jpg" alt="１００円クリーニングコインズ町田店" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="photos/ChIJu8LR-Yh4ajURzQr_s9_E7UE_1.jpg" alt="１００円クリーニングコインズ町田店" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="photos/ChIJu8LR-Yh4ajURzQr_s9_E7UE_2.jpg" alt="１００円クリーニングコインズ町田店" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 写真提供：Google マップ</p>
 </div></section>
+
+<section id="reviews"><div class="wrap"><p class="label">Voice</p><h2 class="ttl" style="color:#0a2540">お客様の声</h2><div class="rev-grid"><div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">「店員さん１人で毎日頑張ってあります。とても感じが良くテキパキこなされます。」</p><p class="rev-author">— 深谷雅子さん</p></div><div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">「定員さんの対応が　良かったです！」</p><p class="rev-author">— 金子和宏さん</p></div><div class="rev-card"><div class="rev-stars">★★★★☆</div><p class="rev-text">「店員さんが、優しく、気持ちいい、応対ですよ😃」</p><p class="rev-author">— 宮崎正江さん</p></div></div></div></section>
 
 <section class="flow" id="flow"><div class="wrap">
 <p class="label">Flow</p><h2 class="ttl">ご利用の流れ</h2>
@@ -88,7 +96,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <h2>まずはお気軽にご連絡ください</h2>
 <p>ご質問・ご予約はお電話にて承っています。</p>
 <div class="cta-phone">0955-75-0120</div>
-<div class="cta-hours">受付時間：9:00〜19:00</div>
+<div class="cta-hours">受付時間：8時00分～19時00分</div>
 <a href="tel:0955-75-0120" class="btn-y">今すぐ電話する</a>
 </div>
 
@@ -99,7 +107,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <tr><th>店舗名</th><td>１００円クリーニングコインズ町田店</td></tr>
 <tr><th>住所</th><td>〒847-0821 佐賀県唐津市町田３丁目５−２０</td></tr>
 <tr><th>電話</th><td><a href="tel:0955-75-0120" style="color:inherit">0955-75-0120</a></td></tr>
-<tr><th>平日</th><td>9:00〜19:00</td></tr><tr><th>土日祝</th><td>9:00〜19:00</td></tr><tr><th>定休日</th><td style="color:#e74c3c;font-weight:600">日曜日</td></tr>
+<tr><th>月〜水</th><td>8時00分～19時00分</td></tr><tr><th>木曜</th><td style="color:#e74c3c;font-weight:600">定休日</td></tr><tr><th>金〜日</th><td>8時00分～19時00分</td></tr>
 </table></div>
 <div><iframe src="https://maps.google.com/maps?q=%E3%80%92847-0821%20%E4%BD%90%E8%B3%80%E7%9C%8C%E5%94%90%E6%B4%A5%E5%B8%82%E7%94%BA%E7%94%B0%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%95%E2%88%92%EF%BC%92%EF%BC%90&output=embed&hl=ja&z=16" width="100%" height="380" style="border:0;border-radius:8px;display:block" allowfullscreen loading="lazy"></iframe></div>
 </div></div></section>

@@ -56,6 +56,12 @@ table.tbl th{text-align:left;padding:11px 0;color:#999;font-size:.78rem;font-wei
 table.tbl td{padding:11px 0;font-size:.86rem;line-height:1.7}
 .map-box{background:linear-gradient(135deg,#f0f7ff,#2779a733);border-radius:8px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0a2540;gap:6px}
 .map-box .mi{font-size:2rem}.map-box p{font-size:.82rem}
+
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:32px}
+.rev-card{background:#fff;padding:22px 24px;border-radius:10px;box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.rev-stars{color:#f5a623;margin-bottom:10px;font-size:.95rem}
+.rev-text{color:#444;font-size:.87rem;line-height:1.85;margin-bottom:12px;font-style:italic}
+.rev-author{color:#aaa;font-size:.78rem;text-align:right}
 .tel-band{background:#2779a7;color:#fff;padding:40px 20px;text-align:center}
 .tel-band h2{font-family:'Noto Serif JP',serif;font-size:1.4rem;margin-bottom:10px}
 .tel-band p{opacity:.85;font-size:.87rem;margin-bottom:18px}
@@ -79,7 +85,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <div class="btns"><a href="#dept" class="btn-b">診療案内を見る</a><a href="#hours" class="btn-o">診療時間を確認</a></div>
 </div>
 <div class="hero-visual" style="overflow:hidden;border-radius:12px;padding:0">
-  <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&h=300&q=80" alt="まさき循環器科内科クリニック" style="width:100%;height:300px;object-fit:cover;display:block" loading="lazy">
+  <img src="photos/ChIJU6Rn2s3pQTURKrRLiM56zLM_0.jpg" alt="まさき循環器科内科クリニック" style="width:100%;height:300px;object-fit:cover;display:block" loading="lazy">
 </div>
 </div></div></div>
 
@@ -101,17 +107,23 @@ footer strong{color:rgba(255,255,255,.7)}
 
 <section id="gallery-sec"><div class="wrap">
 <p class="label">Gallery</p><h2 class="ttl">院内のご案内</h2>
-<div class="gallery"><div class="gi"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&h=400&q=80" alt="まさき循環器科内科クリニック" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&h=400&q=80" alt="まさき循環器科内科クリニック" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&h=400&q=80" alt="まさき循環器科内科クリニック" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 掲載画像はイメージです</p>
+<div class="gallery"><div class="gi"><img src="photos/ChIJU6Rn2s3pQTURKrRLiM56zLM_0.jpg" alt="まさき循環器科内科クリニック" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 写真提供：Google マップ</p>
 </div></section>
+
+<section id="reviews"><div class="wrap"><p class="label">Voice</p><h2 class="ttl" style="color:#0a2540">お客様の声</h2><div class="rev-grid"><div class="rev-card"><div class="rev-stars">★☆☆☆☆</div><p class="rev-text">「ホームページに診察時間も明記しないなんて経営能力疑いますよ」</p><p class="rev-author">— AI AIさん</p></div><div class="rev-card"><div class="rev-stars">★☆☆☆☆</div><p class="rev-text">「2023/07　始めて伺いました・・。その後、レントゲン検査をされて【左胸の処に動脈硬化あり】と、一言/ビックリしました。画像をクリックもせず、説明も無しでした。2024/08担当者から突然、レントゲン検査します・・。断りました。説明ぐらいはするべきです。信用は無く二度と行くことはありません。
+●2024/10福…」</p><p class="rev-author">— Emirin Shibaさん</p></div><div class="rev-card"><div class="rev-stars">★☆☆☆☆</div><p class="rev-text">「度々胸が苦しくなるため初めて受診。胸に機械を貼って１日過ごしてまた次の日受診。
+結果、異常がないからただの「勘違い」です。と言って診察を終わらせられました。
+ただ１万円近い検査代？を支払わされただけでした。
+最低です。二度と行きません。」</p><p class="rev-author">— B Wさん</p></div></div></div></section>
 
 <section class="hours" id="hours"><div class="wrap">
 <p class="label">Hours</p><h2 class="ttl">診療時間</h2>
 <div class="hours-band">
 <h3>診療時間のご案内</h3>
 <div class="hours-grid">
-<div class="day-block"><h4>平日</h4><p style="color:#ffe066;font-weight:700">9:00〜12:00 / 15:00〜18:00</p></div>
-<div class="day-block"><h4>土日祝</h4><p style="color:#ffe066;font-weight:700">9:00〜12:00</p></div>
-<div class="day-block"><h4>定休日</h4><p style="color:#ff8a80;font-weight:700">日曜・祝日</p></div>
+<div class="day-block"><h4>平日</h4><p style="color:#ffe066;font-weight:700">9時00分～13時00分, 15時00分～18時00分</p></div>
+<div class="day-block"><h4>土日祝</h4><p style="color:#ffe066;font-weight:700">9時00分～13時00分, 15時00分～18時00分</p></div>
+<div class="day-block"><h4>定休日</h4><p style="color:#ff8a80;font-weight:700">定休日</p></div>
 </div>
 <p class="notice">※ 診療時間・休診日は変更になる場合があります。必ず事前にお電話でご確認ください。</p>
 </div></div></section>
@@ -132,7 +144,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <h2>ご予約・お問合せ</h2>
 <p>初診の方もお気軽にお電話ください。</p>
 <div class="tel-num">092-330-7070</div>
-<div class="tel-note">受付時間：9:00〜12:00 / 15:00〜18:00</div>
+<div class="tel-note">受付時間：9時00分～13時00分, 15時00分～18時00分</div>
 <a href="tel:092-330-7070" class="btn-b">電話予約する</a>
 </div>
 <footer><strong>まさき循環器科内科クリニック</strong><br>〒819-1117 福岡県糸島市前原西２丁目１６−１０１８−３<br><br>&copy; 2026 まさき循環器科内科クリニック. All rights reserved.</footer>

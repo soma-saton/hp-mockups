@@ -9,7 +9,7 @@ header{position:fixed;top:0;width:100%;background:#1a3a6cf5;backdrop-filter:blur
 .logo{font-family:'Noto Serif JP',serif;color:#fff;font-size:1rem}
 nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.78rem;margin-left:16px}
 @media(max-width:580px){nav{display:none}}
-.hero{min-height:90vh;background:linear-gradient(rgba(26,58,108,0.74),rgba(26,58,108,0.74)),url(https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1400&q=80) center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
+.hero{min-height:90vh;background:linear-gradient(rgba(26,58,108,0.74),rgba(26,58,108,0.74)),url(photos/ChIJbf8pa3x4ajURjY8JEzCYQ-k_0.jpg) center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:56px;background:#eaf0fb;clip-path:ellipse(60% 100% at 50% 100%)}
 .hero-inner{position:relative;z-index:1;max-width:620px}
 .hi{font-size:5rem;display:block;margin-bottom:18px}
@@ -47,6 +47,12 @@ table.tbl th{text-align:left;padding:11px 0;color:#999;font-size:.78rem;font-wei
 table.tbl td{padding:11px 0;font-size:.86rem;line-height:1.7}
 .map-box{background:linear-gradient(135deg,#1a3a6c22,#2e5bba33);border-radius:8px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#1a3a6c;gap:6px}
 .map-box .mi{font-size:2rem}.map-box p{font-size:.82rem}
+
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:32px}
+.rev-card{background:#fff;padding:22px 24px;border-radius:10px;box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.rev-stars{color:#f5a623;margin-bottom:10px;font-size:.95rem}
+.rev-text{color:#444;font-size:.87rem;line-height:1.85;margin-bottom:12px;font-style:italic}
+.rev-author{color:#aaa;font-size:.78rem;text-align:right}
 footer{background:#1a3a6c;color:rgba(255,255,255,.4);padding:24px;text-align:center;font-size:.76rem}
 footer strong{color:rgba(255,255,255,.7)}
 </style></head><body>
@@ -72,8 +78,10 @@ footer strong{color:rgba(255,255,255,.7)}
 
 <section id="gallery-sec"><div class="wrap">
 <p class="label">Gallery</p><h2 class="ttl">サービスの様子</h2>
-<div class="gallery"><div class="gi"><img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&h=400&q=80" alt="唐津ゼミナール" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&h=400&q=80" alt="唐津ゼミナール" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&h=400&q=80" alt="唐津ゼミナール" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 掲載画像はイメージです</p>
+<div class="gallery"><div class="gi"><img src="photos/ChIJbf8pa3x4ajURjY8JEzCYQ-k_0.jpg" alt="唐津ゼミナール" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 写真提供：Google マップ</p>
 </div></section>
+
+<section id="reviews"><div class="wrap"><p class="label">Voice</p><h2 class="ttl" style="color:#1a3a6c">お客様の声</h2><div class="rev-grid"><div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">「最高の塾　行っていて一度も行きたくないと思っていない」</p><p class="rev-author">— 銀太さん</p></div><div class="rev-card"><div class="rev-stars">★☆☆☆☆</div><p class="rev-text">「老朽化が進んでいていつ屋根が落ちるかわからない」</p><p class="rev-author">— 田中みちこさん</p></div><div class="rev-card"><div class="rev-stars">★☆☆☆☆</div><p class="rev-text">「老朽化が進んでいるので壁を変えて欲しい」</p><p class="rev-author">— 大門未知子さん</p></div></div></div></section>
 
 <section class="flow" id="flow"><div class="wrap">
 <p class="label">Flow</p><h2 class="ttl">ご利用の流れ</h2>

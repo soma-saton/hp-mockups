@@ -9,7 +9,7 @@ header{position:fixed;top:0;width:100%;background:#2c2c2cf5;backdrop-filter:blur
 .logo{font-family:'Noto Serif JP',serif;color:#fff;font-size:1rem}
 nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.78rem;margin-left:16px}
 @media(max-width:580px){nav{display:none}}
-.hero{min-height:90vh;background:linear-gradient(rgba(44,44,44,0.74),rgba(44,44,44,0.74)),url(https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1400&q=80) center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
+.hero{min-height:90vh;background:linear-gradient(rgba(44,44,44,0.74),rgba(44,44,44,0.74)),url(photos/ChIJCVcyMQDpQTURG7FyaVOPSvg_0.jpg) center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:78px 20px 56px;position:relative}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:56px;background:#fdf5ff;clip-path:ellipse(60% 100% at 50% 100%)}
 .hero-inner{position:relative;z-index:1;max-width:620px}
 .hi{font-size:5rem;display:block;margin-bottom:18px}
@@ -47,6 +47,12 @@ table.tbl th{text-align:left;padding:11px 0;color:#999;font-size:.78rem;font-wei
 table.tbl td{padding:11px 0;font-size:.86rem;line-height:1.7}
 .map-box{background:linear-gradient(135deg,#2c2c2c22,#c8a9c833);border-radius:8px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#2c2c2c;gap:6px}
 .map-box .mi{font-size:2rem}.map-box p{font-size:.82rem}
+
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:32px}
+.rev-card{background:#fff;padding:22px 24px;border-radius:10px;box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.rev-stars{color:#f5a623;margin-bottom:10px;font-size:.95rem}
+.rev-text{color:#444;font-size:.87rem;line-height:1.85;margin-bottom:12px;font-style:italic}
+.rev-author{color:#aaa;font-size:.78rem;text-align:right}
 footer{background:#2c2c2c;color:rgba(255,255,255,.4);padding:24px;text-align:center;font-size:.76rem}
 footer strong{color:rgba(255,255,255,.7)}
 </style></head><body>
@@ -72,8 +78,12 @@ footer strong{color:rgba(255,255,255,.7)}
 
 <section id="gallery-sec"><div class="wrap">
 <p class="label">Gallery</p><h2 class="ttl">サービスの様子</h2>
-<div class="gallery"><div class="gi"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&h=400&q=80" alt="Nene nail" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1604655816261-4e08d4c70590?auto=format&fit=crop&w=600&h=400&q=80" alt="Nene nail" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1604654894568-d890f0f7b6a8?auto=format&fit=crop&w=600&h=400&q=80" alt="Nene nail" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 掲載画像はイメージです</p>
+<div class="gallery"><div class="gi"><img src="photos/ChIJCVcyMQDpQTURG7FyaVOPSvg_0.jpg" alt="Nene nail" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="photos/ChIJCVcyMQDpQTURG7FyaVOPSvg_1.jpg" alt="Nene nail" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="photos/ChIJCVcyMQDpQTURG7FyaVOPSvg_2.jpg" alt="Nene nail" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 写真提供：Google マップ</p>
 </div></section>
+
+<section id="reviews"><div class="wrap"><p class="label">Voice</p><h2 class="ttl" style="color:#2c2c2c">お客様の声</h2><div class="rev-grid"><div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">「フットネイルをして頂きました！
+持ち込みデザインでしたが想像通り可愛くして下さり、すごく気に入りました！
+スタッフの方もお話しやすく楽しく過ごせました。丁寧な施術で痛いことも全くなくネイルの持ちも良さそうです☺️お値段もお手頃なのに定額デザインも可愛いのばかりなので次はハンドもお願いしようと思います♡」</p><p class="rev-author">— もももさん</p></div></div></div></section>
 
 <section class="flow" id="flow"><div class="wrap">
 <p class="label">Flow</p><h2 class="ttl">ご利用の流れ</h2>
@@ -88,7 +98,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <h2>まずはお気軽にご連絡ください</h2>
 <p>ご質問・ご予約はお電話にて承っています。</p>
 <div class="cta-phone">（要確認）</div>
-<div class="cta-hours">受付時間：10:00〜19:00</div>
+<div class="cta-hours">受付時間：10時00分～17時00分</div>
 <a href="tel:（要確認）" class="btn-y">今すぐ電話する</a>
 </div>
 
@@ -99,7 +109,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <tr><th>店舗名</th><td>Nene nail</td></tr>
 <tr><th>住所</th><td>〒819-1116 福岡県糸島市前原中央３丁目８−７</td></tr>
 <tr><th>電話</th><td><a href="tel:（要確認）" style="color:inherit">（要確認）</a></td></tr>
-<tr><th>平日</th><td>10:00〜19:00</td></tr><tr><th>土日祝</th><td>10:00〜18:00</td></tr><tr><th>定休日</th><td style="color:#e74c3c;font-weight:600">月曜日</td></tr>
+<tr><th>月〜金</th><td>10時00分～17時00分</td></tr><tr><th>土曜</th><td>9時00分～16時30分</td></tr><tr><th>日曜</th><td style="color:#e74c3c;font-weight:600">定休日</td></tr>
 </table></div>
 <div><iframe src="https://maps.google.com/maps?q=%E3%80%92819-1116%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%B3%B8%E5%B3%B6%E5%B8%82%E5%89%8D%E5%8E%9F%E4%B8%AD%E5%A4%AE%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%98%E2%88%92%EF%BC%97&output=embed&hl=ja&z=16" width="100%" height="380" style="border:0;border-radius:8px;display:block" allowfullscreen loading="lazy"></iframe></div>
 </div></div></section>

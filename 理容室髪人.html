@@ -10,7 +10,7 @@ header{position:fixed;top:0;width:100%;background:#1c2c3cf5;padding:10px 20px;di
 .logo em{color:#4a7c9e;font-style:normal}
 nav a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.78rem;margin-left:18px}
 @media(max-width:580px){nav{display:none}}
-.hero{min-height:100vh;background:linear-gradient(rgba(28,44,60,0.8),rgba(28,44,60,0.8)),url(https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=80) center/cover no-repeat;display:flex;align-items:center;padding:80px 20px 60px;position:relative;overflow:hidden}
+.hero{min-height:100vh;background:linear-gradient(rgba(28,44,60,0.8),rgba(28,44,60,0.8)),url(photos/ChIJ-TLn1cDpQTURPQpNNpKWZKw_0.jpg) center/cover no-repeat;display:flex;align-items:center;padding:80px 20px 60px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:-100px;top:50%;transform:translateY(-50%);width:500px;height:500px;background:radial-gradient(circle,#4a7c9e22 0%,transparent 70%);border-radius:50%}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:#eef6fb;clip-path:ellipse(55% 100% at 50% 100%)}
 .hero-body{position:relative;z-index:1;max-width:580px;padding-left:5%}
@@ -60,6 +60,12 @@ table.tbl td{padding:11px 0;font-size:.86rem;line-height:1.7}
 .gi img:hover{transform:scale(1.06)}
 @media(max-width:600px){.gallery{grid-template-columns:1fr}}
 .img-note{color:#bbb;font-size:.72rem;margin-top:8px;text-align:right}
+
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:32px}
+.rev-card{background:#fff;padding:22px 24px;border-radius:10px;box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.rev-stars{color:#f5a623;margin-bottom:10px;font-size:.95rem}
+.rev-text{color:#444;font-size:.87rem;line-height:1.85;margin-bottom:12px;font-style:italic}
+.rev-author{color:#aaa;font-size:.78rem;text-align:right}
 footer{background:#1c2c3c;color:rgba(255,255,255,.4);padding:24px;text-align:center;font-size:.76rem}
 footer strong{color:rgba(255,255,255,.7)}
 </style></head><body>
@@ -84,14 +90,19 @@ footer strong{color:rgba(255,255,255,.7)}
 <p>完全ご予約制で、待ち時間なしでご案内します。</p>
 </div>
 <div class="concept-img" style="overflow:hidden;padding:0">
-  <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&h=300&q=80" alt="理容室髪人" style="width:100%;height:280px;object-fit:cover;border-radius:8px" loading="lazy">
+  <img src="photos/ChIJ-TLn1cDpQTURPQpNNpKWZKw_1.jpg" alt="理容室髪人" style="width:100%;height:280px;object-fit:cover;border-radius:8px" loading="lazy">
 </div>
 </div></div></section>
 
 <section id="gallery-sec"><div class="wrap">
 <p class="label">Gallery</p><h2 class="ttl">サロンの雰囲気</h2>
-<div class="gallery"><div class="gi"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&h=400&q=80" alt="理容室髪人" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&h=400&q=80" alt="理容室髪人" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?auto=format&fit=crop&w=600&h=400&q=80" alt="理容室髪人" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 掲載画像はイメージです</p>
+<div class="gallery"><div class="gi"><img src="photos/ChIJ-TLn1cDpQTURPQpNNpKWZKw_0.jpg" alt="理容室髪人" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="photos/ChIJ-TLn1cDpQTURPQpNNpKWZKw_1.jpg" alt="理容室髪人" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div><div class="gi"><img src="photos/ChIJ-TLn1cDpQTURPQpNNpKWZKw_2.jpg" alt="理容室髪人" loading="lazy" onerror="this.parentNode.style.background='#ddd'"></div></div><p class="img-note">※ 写真提供：Google マップ</p>
 </div></section>
+
+<section id="reviews"><div class="wrap"><p class="label">Voice</p><h2 class="ttl" style="color:#1c2c3c">お客様の声</h2><div class="rev-grid"><div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">「とてもリラックスできました。仕事が早くて丁寧。髪も心もコンディション整うなんて初めての感覚。予約も取りやすく思い立ってすぐ行ける。ありがたいお店だなと感動でした。」</p><p class="rev-author">— ikutoさん</p></div><div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">「子どもカットでお世話になりました。
+予約電話をするとすぐの案内でお店に行くと待ち時間全くなく作業分担もされていてとてもスムーズでした！
+予約は10分刻みで合間合間に次々に当日予約が入ってました！
+産毛の顔剃りも丁寧でカッコ良くツーブロックにしてもらって、子ども達大満足で帰宅しました☆」</p><p class="rev-author">— Fujikoさん</p></div><div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">「感染対策をしっかりされている腕の良い理髪店です。完全予約制になっています。当日予約もできると思いますが、土日の午前中は多いので早めに取ったほうがいいと思われます。私個人的には美容室より理容店の方が顔そりなどでさっぱりできるし、価格はおよそ半分で、きっちり仕上げてくれるので好みです。顔そりシャンプー込で2,200円…」</p><p class="rev-author">— 76 Ayadyさん</p></div></div></div></section>
 
 <section class="menu-price" id="menu-price"><div class="wrap">
 <p class="label">Menu & Price</p><h2 class="ttl">メニュー・料金</h2>
@@ -116,7 +127,7 @@ footer strong{color:rgba(255,255,255,.7)}
 <tr><th>店舗名</th><td>理容室髪人</td></tr>
 <tr><th>住所</th><td>〒819-1116 福岡県糸島市前原中央３丁目１８−２４</td></tr>
 <tr><th>電話</th><td><a href="tel:092-323-2400" style="color:inherit">092-323-2400</a></td></tr>
-<tr><th>平日</th><td>9:00〜19:00</td></tr><tr><th>土日祝</th><td>9:00〜18:00</td></tr><tr><th>定休日</th><td style="color:#e74c3c;font-weight:600">火曜日</td></tr>
+<tr><th>月〜火</th><td style="color:#e74c3c;font-weight:600">定休日</td></tr><tr><th>水〜金</th><td>9時00分～19時00分</td></tr><tr><th>土〜日</th><td>8時00分～18時00分</td></tr>
 </table></div>
 <div><iframe src="https://maps.google.com/maps?q=%E3%80%92819-1116%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%B3%B8%E5%B3%B6%E5%B8%82%E5%89%8D%E5%8E%9F%E4%B8%AD%E5%A4%AE%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%98%E2%88%92%EF%BC%92%EF%BC%94&output=embed&hl=ja&z=16" width="100%" height="380" style="border:0;border-radius:8px;display:block" allowfullscreen loading="lazy"></iframe></div>
 </div></div></section>
